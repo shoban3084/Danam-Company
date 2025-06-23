@@ -1,0 +1,89 @@
+/* === Global Reset === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+} 
+
+html, body {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f9f9f9;
+  color: #222;
+}
+
+/* Make room for fixed TopBar and LowerBar */
+body {
+  padding-top: 140px; /* 60px TopBar + 80px LowerBar */
+}
+
+/* === TopBar Styling === */
+.topbar-wrapper {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: #22345F;
+}
+
+/* === LowerBar Styling === */
+.lowerbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #f9f9f9;
+  padding: 20px 80px;
+  border-bottom: 1px solid #ddd;
+  position: relative;
+  z-index: 999;
+  width: 100%;
+  transition: top 0.3s ease, box-shadow 0.3s ease;
+}
+
+.lowerbar-fixed {
+  position: fixed;
+  top: 60px; /* TopBar height */
+  left: 0;
+  background: #fff;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  z-index: 998;
+}
+
+/* === Menu Dropdowns (already handled) === */
+
+/* === Responsive Support === */
+@media (max-width: 768px) {
+  body {
+    padding-top: 180px;
+  }
+
+  .lowerbar-container {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 40px;
+  }
+
+  .nav-menu {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .menu-list {
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+  }
+
+  .dropdown-menu {
+    position: static;
+    box-shadow: none;
+    padding-left: 20px;
+  }
+}

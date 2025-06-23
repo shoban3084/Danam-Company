@@ -1,0 +1,129 @@
+.lowerbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(255, 255, 255, 0.8); /* Transparent white */
+  backdrop-filter: blur(10px); /* Optional: glassy blur */
+  -webkit-backdrop-filter: blur(10px); /* For Safari */
+  padding: 20px 0;
+  border-bottom: 2px solid #ddd;
+  width: 100%;
+  transition: top 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  z-index: 999;
+  position: relative;
+}
+
+.lowerbar-fixed {
+  position: fixed;
+  top: 60px; /* Offset below TopBar */
+  width: 100%;
+  z-index: 998;
+  background: rgba(255, 255, 255, 0.95); /* Slightly more solid on scroll */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Add other styles as you already have for menu, dropdowns, etc. */
+
+.logo-img {
+  height: 50px;
+  object-fit: contain;
+  padding-left: 100px;
+}
+
+.nav-menu {
+  flex: 1;
+  text-align: right;
+}
+
+.menu-list {
+  list-style: none;
+  display: flex;
+  gap: 40px;
+  margin: 0;
+  padding-right: 6%;
+  justify-content: flex-end;
+}
+
+.menu-list li {
+  position: relative;
+}
+
+.menu-list li a {
+  text-decoration: none;
+  color: #111;
+  font-weight: 600;
+  font-size: 15px;
+  padding: 10px 5px;
+  display: inline-block;
+}
+
+.menu-list li.active a {
+  color: orange;
+}
+
+/* Dropdown styles */
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 40px;
+  left: 0;
+  background: #ffffff;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+  min-width: 240px;
+  z-index: 9999;
+}
+
+.dropdown-menu li {
+  padding: 8px 15px;
+}
+
+.dropdown-menu li a {
+  color: #333;
+  font-size: 14px;
+  font-weight: 500;
+  display: block;
+  white-space: nowrap;
+}
+
+.dropdown-menu li:hover {
+  background-color: #f0f0f0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .lowerbar-container {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+  }
+
+  .nav-menu {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .menu-list {
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+  }
+
+  .dropdown-menu {
+    position: static;
+    box-shadow: none;
+    padding-left: 20px;
+  }
+}
+
+/* Prevent content from hiding under fixed navbar */
+body {
+  padding-top: 100px;
+}
+

@@ -1,0 +1,9 @@
+export { default as TopBar } from './TopBar';
+export { default as LowerBar } from './LowerBar';
+export { default as MainSlider } from './MainSlider';
+export { default as ClientsSection } from './ClientsSection';
+export { default as FactCounter } from './FactCounter';
+export { default as FeatureSection } from './FeatureSection';
+export { default as Footer } from './Footer';
+export { default as ServiceSection } from './ServiceSection';
+export { default as CallBack } from './CallBack';

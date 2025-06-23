@@ -1,0 +1,141 @@
+/* ===== Global Reset ===== */
+body, ul, li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f9f9f9;
+  color: #222;
+}
+
+/* ===== Container ===== */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* ===== Logo Styling ===== */
+.logo-box img {
+  max-height: 40px;
+  width: auto;
+  object-fit: contain;
+}
+
+/* ===== Header Upper and Lower Flex Layout ===== */
+.header-upper .container,
+.header-lower .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+}
+
+.header-upper ul li {
+  line-height: 1.5;
+}
+
+/* ===== Navigation Menu ===== */
+.main-menu a {
+  text-decoration: none;
+  color: #111;
+  font-weight: 600;
+  font-size: 15px;
+  padding: 10px 5px;
+  display: inline-block;
+  transition: color 0.2s ease-in-out;
+}
+
+.main-menu ul {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+.main-menu ul li {
+  position: relative;
+}
+
+/* ===== Active Menu Item ===== */
+.main-menu ul li.active a {
+  color: orange;
+}
+
+/* ===== Dropdown Menu ===== */
+.main-menu ul li ul {
+  display: none;
+  position: absolute;
+  top: 40px;
+  left: 0;
+  background: #ffffff;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  min-width: 200px;
+  border-radius: 4px;
+  padding: 0.5rem 0;
+  transition: all 0.3s ease-in-out;
+  z-index: 9999;
+}
+
+.main-menu li:hover > ul {
+  display: block;
+}
+
+.main-menu ul li ul li {
+  padding: 0.25rem 1rem;
+  white-space: nowrap;
+}
+
+.main-menu ul li ul li:hover {
+  background-color: #f3f4f6;
+}
+
+/* ===== Social Icons (Top Right) ===== */
+.top-right a i {
+  transition: color 0.3s ease;
+}
+
+.top-right a:hover i {
+  color: #facc15; 
+}
+
+/* ===== Responsive Styles ===== */
+@media (max-width: 768px) {
+  .main-menu ul {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .main-menu ul li ul {
+    position: static;
+    display: none;
+    box-shadow: none;
+  }
+
+  .main-menu ul li:hover ul {
+    display: block;
+  }
+
+  .header-upper .container,
+  .header-lower .container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .logo-box {
+    margin-bottom: 1rem;
+  }
+}
+.topbar-wrapper {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: #22345F;
+}
+
+

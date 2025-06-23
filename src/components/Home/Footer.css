@@ -1,0 +1,201 @@
+/* Main Footer Container */
+.footer {
+  background-color: #1e2a47;
+  color: white;
+  padding: 60px 40px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Layout Flex Container */
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+/* Column Styling */
+.footer-column {
+  flex: 1;
+  min-width: 230px;
+}
+
+/* Logo Styling */
+.footer-logo {
+  width: 200px;
+  margin-bottom: 20px;
+}
+
+/* Description Text */
+.footer-text {
+  font-size: 15px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+/* About Button */
+.about-button {
+  background-color: #fcb827;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.about-button:hover {
+  background-color: #e5a700;
+}
+
+/* Column Title */
+.footer-title {
+  font-size: 18px;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+/* Unordered Lists */
+.footer-list {
+  list-style: none;
+  padding: 0;
+}
+.footer-list li {
+  margin-bottom: 10px;
+}
+.footer-list a {
+  color: white;
+  text-decoration: none;
+  transition: 0.2s;
+}
+.footer-list a:hover {
+  color: #fcb827;
+}
+
+/* Newsletter Input & Button Container */
+.newsletter {
+  display: flex;
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  max-width: 300px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+/* Email Input */
+.newsletter input {
+  flex: 1;
+  padding: 12px;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  color: #333;
+  border-radius: 4px 0 0 4px;
+}
+
+/* Send Button */
+.newsletter button {
+  background-color: #fcb827;
+  border: none;
+  padding: 0 20px;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0 4px 4px 0;
+}
+
+/* Paper Plane Icon */
+.newsletter button i {
+  font-size: 16px;
+}
+
+/* Social Icons Styling */
+.social-icons a {
+  display: inline-block;
+  margin-right: 12px;
+  color: white;
+  font-size: 16px;
+  width: 36px;
+  height: 36px;
+  text-align: center;
+  line-height: 36px;
+  border-radius: 50%;
+  border: 1px solid #ccc;
+  transition: 0.3s;
+}
+.social-icons a:hover {
+  background-color: #fcb827;
+  border-color: #fcb827;
+  color: #1e2a47;
+}
+.social-icons a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 12px;
+  color: white;
+  font-size: 18px;
+  width: 36px;
+  height: 36px;
+  text-align: center;
+  line-height: 36px;
+  border-radius: 50%;
+  border: 1px solid #ccc;
+  transition: 0.3s;
+}
+
+.social-icons a:hover {
+  background-color: #fcb827;
+  border-color: #fcb827;
+  color: #1e2a47;
+}
+.footer-bottom {
+  background-color: #17213a;
+  padding: 15px 0;
+  border-top: 1px solid #444;
+  text-align: center;
+}
+
+.footer-bottom .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-bottom p {
+  color: #ccc;
+  font-size: 14px;
+  margin: 0;
+}
+
+.footer-bottom a {
+  color: #fcb827;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.footer-bottom a:hover {
+  text-decoration:none;
+}
+.scroll-to-top {
+  position: fixed;
+  bottom: 90px;
+  right: 25px;
+  background-color: #fcb827;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  padding: 12px;
+  font-size: 18px;
+  cursor: pointer;
+  z-index: 999;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transition: background-color 0.3s ease;
+}
+
+.scroll-to-top:hover {
+  background-color: #e5a700;
+}

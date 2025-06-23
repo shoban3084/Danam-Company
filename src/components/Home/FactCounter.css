@@ -1,0 +1,87 @@
+/* Section with background image */
+.fact-counter {
+  background-size:auto;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  min-height: 300px;
+  min-width: 100px;
+  font-family: Arial, sans-serif;
+  color: #fff;
+  text-align: center;
+}
+
+/* Blue overlay on top of image */
+.fact-counter .overlay {
+  background-color: rgba(0, 34, 85, 0.8); /* dark blue transparent */
+  width: 100%;
+  height: 100%;
+  padding: auto;
+}
+
+/* Layout container */
+.container {
+  max-width: 120px;
+  margin: 0 auto;
+  padding: 8px 20px;
+}
+
+/* Row for the counters */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Each counter column */
+.column {
+  flex: 1 1 22%;
+  margin: 10px;
+  min-width: 200px;
+}
+
+/* Counter card */
+.count-box {
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  padding: 30px 15px;
+  border-radius: 6px;
+  background: transparent;
+}
+
+/* Big yellow number */
+.count-number {
+  font-size: 90px;
+  font-weight: bold;
+  color: #fbc02d;
+}
+
+.plus {
+  font-size: 20px;
+  color: #fbc02d;
+}
+
+/* Description */
+.count-label {
+  margin-top: 90px;
+  font-size: 16px;
+  color: #fff;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .row {
+    justify-content: center;
+  }
+
+  .column {
+    flex: 1 1 45%;
+    margin: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .column {
+    flex: 1 1 100%;
+  }
+}
