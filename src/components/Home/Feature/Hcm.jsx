@@ -1,5 +1,5 @@
 import "./Hcm.css";
-import hcmImage from "../../../assets/Hcm.jpg";
+import hcm from "../../../assets/Hcm.jpg";
 import TopBar from "../TopBar";
 import LowerBar from "../LowerBar";
 import Footer from "../Footer";
@@ -37,7 +37,7 @@ const Hcm = () => {
                   <div className="col-md-6 hcm-col">
                     <div className="img-box">
                       <figure>
-                        <img src={hcmImage} alt="SAP HCM" />
+                        <img src={hcm} alt="SAP HCM" />
                       </figure>
                     </div>
                   </div>
