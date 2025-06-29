@@ -1,5 +1,5 @@
 import "./SapSolution.css";
-import SapSolutionImage from "../../../assets/hcm.jpg";
+import SapSolutionImage from "../../../assets/SapSolution.jpg";
 import TopBar from "../TopBar";
 import LowerBar from "../LowerBar";
 import Footer from "../Footer";
