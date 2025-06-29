@@ -1,5 +1,5 @@
 import "./Hcm.css";
-import hcmImage from "../../../assets/hcm.jpg";
+import hcmImage from "../../../assets/Hcm.jpg";
 import TopBar from "../TopBar";
 import LowerBar from "../LowerBar";
 import Footer from "../Footer";
