@@ -26,27 +26,24 @@ const logos = [
 
 export default function ClientsSection() {
   const sliderRef = useRef(null);
-  const scrollIntervalRef = useRef(null);
   const [isHovered, setIsHovered] = useState(false);
 
-  // Auto-scroll logic
   useEffect(() => {
+    const slider = sliderRef.current;
+    if (!slider) return;
+
     const scroll = () => {
-      if (!isHovered && sliderRef.current) {
-        sliderRef.current.scrollLeft += 1;
+      if (!isHovered) {
+        slider.scrollLeft += 1;
+        if (slider.scrollLeft >= slider.scrollWidth / 2) {
+          slider.scrollLeft = 0;
+        }
       }
     };
-    scrollIntervalRef.current = setInterval(scroll, 20); // adjust speed
-    return () => clearInterval(scrollIntervalRef.current);
+
+    const interval = setInterval(scroll, 20);
+    return () => clearInterval(interval);
   }, [isHovered]);
-
-  const scrollLeft = () => {
-    if (sliderRef.current) sliderRef.current.scrollLeft -= 200;
-  };
-
-  const scrollRight = () => {
-    if (sliderRef.current) sliderRef.current.scrollLeft += 200;
-  };
 
   return (
     <section className="sponsors-section">
@@ -55,8 +52,6 @@ export default function ClientsSection() {
         <div className="title-text"><p>Trusted by top-tier organizations</p></div>
 
         <div className="slider-wrapper">
-          <button className="arrow left" onClick={scrollLeft}>&lt;</button>
-
           <ul
             className="sponsors-slider"
             ref={sliderRef}
@@ -65,14 +60,10 @@ export default function ClientsSection() {
           >
             {[...logos, ...logos].map((logo, idx) => (
               <li key={idx}>
-                <a href="#">
-                  <img src={logo} alt={`Logo ${idx}`} />
-                </a>
+                <img src={logo} alt={`Logo ${idx}`} />
               </li>
             ))}
           </ul>
-
-          <button className="arrow right" onClick={scrollRight}>&gt;</button>
         </div>
       </div>
     </section>

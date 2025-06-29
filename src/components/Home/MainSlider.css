@@ -7,13 +7,25 @@
   padding: 0;     
   box-sizing: border-box;
 }
+.pause-play-button {
+  position: absolute;
+  bottom: 15px;
+  right: 20px;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  z-index: 10;
+}
 
 .slide {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 100%; 
   background-size: cover;
   background-position: center;
   opacity: 0;
@@ -194,5 +206,115 @@
   }
   .btn-two {
     padding: 12px 35px;
+  }
+}
+
+/* ===== Responsive Design for MainSlider ===== */
+
+/* Default styles already provided (base is 70vh, positioned elements) */
+
+@media (max-width: 1200px) {
+  .slide-title {
+    font-size: 42px;
+    line-height: 48px;
+  }
+  .slide-subtitle {
+    max-width: 520px;
+    font-size: 1rem;
+  }
+  .slide-content {
+    left: 8%;
+  }
+}
+
+@media (max-width: 992px) {
+  .slide-title {
+    font-size: 36px;
+    line-height: 42px;
+  }
+  .slide-subtitle {
+    max-width: 480px;
+    font-size: 0.95rem;
+  }
+  .slide-content {
+    left: 6%;
+  }
+  .btn-two {
+    padding: 10px 28px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .slide-title {
+    font-size: 28px;
+    line-height: 34px;
+  }
+  .slide-subtitle {
+    max-width: 380px;
+    font-size: 0.9rem;
+  }
+  .slide-content {
+    left: 5%;
+  }
+  .btn-two {
+    padding: 10px 25px;
+    font-size: 13px;
+  }
+  .slider-arrow {
+    font-size: 1.5rem;
+    padding: 8px;
+  }
+  .pause-play-button {
+    bottom: 10px;
+    right: 15px;
+    padding: 6px 10px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .slide-title {
+    font-size: 22px;
+    line-height: 28px;
+  }
+  .slide-subtitle {
+    max-width: 320px;
+    font-size: 0.85rem;
+  }
+  .slide-content {
+    left: 4%;
+    max-width: 90%;
+  }
+  .btn-two {
+    padding: 8px 20px;
+    font-size: 12px;
+    margin-right: 10px;
+  }
+  .slider-arrow {
+    font-size: 1.2rem;
+  }
+  .pause-play-button {
+    bottom: 8px;
+    right: 10px;
+    padding: 4px 8px;
+    font-size: 12px;
+  }
+  .timer-bar {
+    height: 3px;
+  }
+}
+
+@media (max-width: 360px) {
+  .slide-title {
+    font-size: 18px;
+    line-height: 24px;
+  }
+  .slide-subtitle {
+    font-size: 0.8rem;
+  }
+  .btn-two {
+    padding: 6px 16px;
+    font-size: 11px;
   }
 }

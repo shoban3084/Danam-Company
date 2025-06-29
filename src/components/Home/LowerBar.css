@@ -1,12 +1,13 @@
+/* ===== LowerBar Container ===== */
 .lowerbar-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: rgba(255, 255, 255, 0.8); /* Transparent white */
-  backdrop-filter: blur(10px); /* Optional: glassy blur */
-  -webkit-backdrop-filter: blur(10px); /* For Safari */
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   padding: 20px 0;
-  border-bottom: 2px solid #ddd;
+  border-bottom: 2px solid #fefefe;
   width: 100%;
   transition: top 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
   z-index: 999;
@@ -15,56 +16,65 @@
 
 .lowerbar-fixed {
   position: fixed;
-  top: 60px; /* Offset below TopBar */
+  top: 60px;
   width: 100%;
-  z-index: 998;
-  background: rgba(255, 255, 255, 0.95); /* Slightly more solid on scroll */
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  z-index: 999;
+  background: rgba(255, 255, 255, 0.95);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-
-/* Add other styles as you already have for menu, dropdowns, etc. */
+.logo-box {
+  padding-left: 100px;
+}
 
 .logo-img {
   height: 50px;
   object-fit: contain;
-  padding-left: 100px;
 }
 
+/* ===== Navigation ===== */
 .nav-menu {
   flex: 1;
   text-align: right;
 }
 
 .menu-list {
-  list-style: none;
   display: flex;
+  align-items: center;
   gap: 40px;
   margin: 0;
-  padding-right: 6%;
-  justify-content: flex-end;
+  padding-left: 500px;
+  height: 100%;
 }
 
 .menu-list li {
   position: relative;
+  list-style: none;
 }
 
 .menu-list li a {
   text-decoration: none;
   color: #111;
   font-weight: 600;
-  font-size: 15px;
+  font-size: 14px;
   padding: 10px 5px;
   display: inline-block;
+  transition: color 0.3s ease;
 }
 
-.menu-list li.active a {
+.menu-list li .active-link {
   color: orange;
 }
 
-/* Dropdown styles */
+.menu-list li a:hover {
+  color: orange;
+}
+
+/* ===== Dropdown Menu ===== */
+.dropdown {
+  position: relative;
+}
+
 .dropdown:hover .dropdown-menu {
   display: block;
 }
@@ -72,58 +82,113 @@
 .dropdown-menu {
   display: none;
   position: absolute;
-  top: 40px;
+  top: 100%;
   left: 0;
-  background: #ffffff;
-  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
-  min-width: 240px;
+  background-color: #222;
+  border: 1px solid orange;
+  min-width: 200px;
   z-index: 9999;
+  padding: 0;
 }
 
 .dropdown-menu li {
-  padding: 8px 15px;
+  padding: 6px 10px;
+  font-size: 14px;
+  font-weight: bold;
+  color: white;
+  border-bottom: 2px dashed orange;
+}
+
+.dropdown-menu li:last-child {
+  border-bottom: none;
 }
 
 .dropdown-menu li a {
-  color: #333;
-  font-size: 14px;
-  font-weight: 500;
+  color: white;
+  text-decoration: none;
   display: block;
-  white-space: nowrap;
 }
 
 .dropdown-menu li:hover {
-  background-color: #f0f0f0;
+  background-color: #333;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-  .lowerbar-container {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 20px;
+/* ===== Hamburger Icon ===== */
+.hamburger-icon {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 25px;
+  height: 18px;
+  cursor: pointer;
+  position: absolute;
+  right: 30px;
+  top: 28px;
+  z-index: 1001;
+}
+
+.hamburger-icon span {
+  display: block;
+  height: 3px;
+  background-color: #f6b129;
+  border-radius: 2px;
+}
+
+/* ===== Responsive ===== */
+
+/* Show hamburger in tablet & below */
+@media (max-width: 1024px) {
+  .hamburger-icon {
+    display: flex;
   }
 
   .nav-menu {
+    display: none;
     width: 100%;
-    margin-top: 10px;
+    background-color: white;
+    padding: 10px 20px;
+  }
+
+  .nav-menu.open {
+    display: block;
   }
 
   .menu-list {
     flex-direction: column;
-    gap: 10px;
+    gap: 15px;
     align-items: flex-start;
+    padding-left: 20px;
   }
 
   .dropdown-menu {
     position: static;
-    box-shadow: none;
+    background: #333;
+    width: 100%;
+    border: none;
+  }
+
+  .logo-box {
+    padding-left: 0;
+    text-align: left;
+    width: 100%;
     padding-left: 20px;
+  }
+
+  .logo-img {
+    height: 45px;
+    object-fit: contain;
   }
 }
 
-/* Prevent content from hiding under fixed navbar */
-body {
-  padding-top: 100px;
-}
+/* For very small devices */
+@media (max-width: 480px) {
+  .menu-list {
+    gap: 10px;
+    padding-left: 10px;
+  }
 
+  .hamburger-icon {
+    right: 20px;
+    top: 22px;
+  }
+}

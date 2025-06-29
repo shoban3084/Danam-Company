@@ -1,0 +1,143 @@
+/* Oracle Banner Background */
+.oracle-bg.centered {
+  height: 300px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  padding-top: 200px;
+  color: #000000;
+  text-align: center;
+  font-size: 36px;
+  font-weight: 600;
+  text-shadow: 0px 2px 6px rgba(0, 0, 0, 0.6);
+}
+
+/* Breadcrumb */
+.NavBar {
+  background-color: #f5f5f5;
+  padding: 15px 0;
+  font-size: 16px;
+}
+.NavBar .container {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.NavBar .text a {
+  color: #f6b129;
+  text-decoration: none;
+  font-weight: 600;
+}
+.NavBar .text i {
+  margin: 0 10px;
+  color: #999;
+}
+
+/* Container */
+.container {
+  width: 100%;
+  margin: auto;
+  max-width: 1200px;
+  padding: 0 15px;
+}
+
+/* Main Wrapper (boxed inside container) */
+.oracle-wrapper {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding: 40px 0;
+  background: whitesmoke;
+  color: #000000;
+}
+
+/* Section Title */
+.oracle-title {
+  margin-bottom: 40px;
+}
+.oracle-title h1 {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  border-left: 5px solid #ffaa00;
+  padding-left: 10px;
+}
+.oracle-title p {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* Flex Layout for Content */
+.oracle-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+/* Left Text Column */
+.oracle-left {
+  flex: 1 1 48%;
+  min-width: 300px;
+}
+.oracle-left h2 {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  border-left: 5px solid #ffaa00;
+  padding-left: 10px;
+}
+.oracle-left p {
+  font-size: 15.5px;
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+
+/* Right Image Column */
+.oracle-right {
+  flex: 1 1 48%;
+  min-width: 300px;
+  text-align: center;
+}
+.oracle-right img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* List Styles */
+.oracle-list {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 20px;
+}
+.oracle-list li {
+  position: relative;
+  padding-left: 24px;
+  margin-bottom: 10px;
+  font-size: 16px;
+  line-height: 1.4;
+}
+.oracle-list li::before {
+  content: "❯";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #f4b400;
+  font-size: 18px;
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+  .oracle-wrapper {
+    padding: 20px 0;
+  }
+  .oracle-content {
+    flex-direction: column;
+  }
+  .oracle-left, .oracle-right {
+    width: 100%;
+  }
+}

@@ -67,7 +67,19 @@
   color: white;
   text-decoration: none;
   transition: 0.2s;
+  position: relative;
+  padding-left: 16px;
 }
+
+.footer-list a::before {
+  content: "❯"; 
+  position: absolute;
+  left: 0;
+  color: #ffffff;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
 .footer-list a:hover {
   color: #fcb827;
 }

@@ -1,7 +1,6 @@
-import React from 'react';
 import './About.css';
-import aboutImg from '../../../assets/about-us.jpg'; // Must exist in /src/assets
-import bannerImg from '../../../assets/about-banner.jpg'; // Optional separate banner
+import aboutImg from '../../../assets/about-us.jpg'; 
+import bannerImg from '../../../assets/about_banner.jpg'; 
 import TopBar from '../TopBar';
 import LowerBar from '../LowerBar';
 import FactCounter from '../FactCounter';
@@ -18,16 +17,14 @@ const About = () => {
         className="about-bg centered"
         style={{ backgroundImage: `url(${bannerImg})` }}
       >
-        <div className="container">
-          <div className="text">About Us</div>
-        </div>
+        <div className="text">About Us</div>
       </div>
 
       {/* Breadcrumb */}
-      <div className="bread-crumb">
+      <div className="about-breadcrumb">
         <div className="container">
           <div className="text">
-            <a href="/">Home</a> <i className="fa fa-angle-right"></i> About Us
+            <a href="/">Home</a><i className="fa fa-angle-right"></i> About Us
           </div>
         </div>
       </div>
@@ -59,20 +56,20 @@ const About = () => {
               Danam's focus shall be to provide predictive and risk adjusted approach to corporate performance. Provide a unified , easy to use and best practice business processes by providing a platform for delivery and monitoring of better and faster business data and metrics for regulatory compliance and stake holders across enterprise which will enable one and only version of truth for the KPI's across enterprise. Create value additions in implementation and production support and provide Staffing to strategic customers.
             </p>
             <p>
-              We offer our customers tailored solutions and service portfolio for the entire life cycle of SAP investment through a flexible onsite and offsite business model. This flexible model will give us an edge and shall enable us to provide mission critical applications with cost effective solutions for enterprises irrespective of its size and business model.
+              We offer our customers tailored solutions and service portfolio for the entire life cycle of Sev-AI investment through a flexible onsite and offsite business model. This flexible model will give us an edge and shall enable us to provide mission critical applications with cost effective solutions for enterprises irrespective of its size and business model.
             </p>
             <p>
-             The management team of Danam consists of Industry veterans with deep SAP and BusinessObjects product implementation and production support experience in leading industries and with global rollouts. This experience with client centric approach will be leveraged to build industry specific solution addressing the industry pain points using SAPs latest technology of HANA, Mobile and cloud solutions.
+             The management team of Danam consists of Industry veterans with deep Sev-AI and Business Objects product implementation and production support experience in leading industries and with global rollouts. This experience with client centric approach will be leveraged to build industry specific solution addressing the industry pain points using Sev-AI latest technology of AI, Mobile and cloud solutions.
             </p>
             <p>
-              The strategy of our company shall be to create industry solution which will be used as enablers to create market for company services. Danam will also invest money to train its consultants with rich industry experience in latest technologies as a result Danam will be in an enviable position with its best in class consultants together with industry specific ready to deploy solutions to approach the market in the areas of disruptive technologies .
+              The strategy of our company shall be to create industry solution which will be used as enablers to create market for company services. Danam will also invest money to train its consultants with rich industry experience in latest technologies Like(AI,Digitalization) as a result Danam will be in an enviable position with its best in class consultants together with industry specific ready to deploy solutions to approach the market in the areas of disruptive technologies .
             </p>
           </div>
         </div>
       </section>
-      <FactCounter/>
-      <ClientsSection/>
-      <Footer/>
+        <FactCounter />
+        <ClientsSection />
+        <Footer/>
     </>
   );
 };

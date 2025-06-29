@@ -1,0 +1,142 @@
+/* Banner Section */
+.sevai-bg.centered {
+  background-size: cover;
+  background-position: center;
+  padding: 100px 0;
+  color: #000000;
+  text-align: center;
+  font-size: 36px;
+  font-weight: 600;
+}
+
+/* Breadcrumb (NavBar) */
+.NavBar {
+  background: #ffffff;
+  padding: 15px 0;
+  font-size: 14px;
+}
+.NavBar .text a {
+  text-decoration: none;
+  color: #000;
+  font-weight: 500;
+  margin: 0 5px;
+}
+.NavBar .text i {
+  margin: 0 5px;
+  color: #aaa;
+}
+
+/* Wrapper Section */
+.sevai-wrapper {
+  padding: 40px 0;
+  background: transparent;
+}
+
+/* Section Title */
+.sevai-wrapper .sevai-title {
+  font-size: 28px;
+  font-weight: 900;
+  margin-bottom: 20px;
+  color: #ffaa00;
+  border-left: 5px solid #ffaa00;
+  padding-left: 15px;
+}
+
+/* Paragraph Text */
+.sevai-wrapper .text {
+  font-size: 16px;
+  color: #444;
+  margin-bottom: 20px;
+  line-height: 1.8;
+}
+
+/* Content Section */
+.content-style-one,
+.content-style-two {
+  margin-top: 40px;
+}
+
+/* Headings in Content */
+.content-style-two h4 {
+  font-size: 22px;
+  margin-bottom: 15px;
+  color: #333;
+  border-left: 5px solid #ffaa00;
+  padding-left: 10px;
+}
+
+/* List */
+.sevai-list {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 20px;
+}
+.sevai-list li {
+  padding-left: 20px;
+  position: relative;
+  margin-bottom: 10px;
+}
+.sevai-list li::before {
+  content: "❯";
+  font-family: 'FontAwesome';
+  position: absolute;
+  left: 0;
+  color: #f6b129;
+}
+
+/* Image Styling */
+.sevai-wrapper img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 20px 0;
+  border-radius: 6px;
+  box-shadow: none;
+}
+
+/* Responsive Grid */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.col-md-6 {
+  flex: 1 1 48%;
+  min-width: 300px;
+}
+
+/* Fix: Align right column text with left heading */
+.upgrades-align-fix {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-top: 20px;
+}
+
+/* Custom Colors */
+.NavBar .text a:hover,
+.sevai-list li::before {
+  color: #f6b129;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .sevai-bg.centered {
+    font-size: 28px;
+    padding: 60px 0;
+  }
+
+  .col-md-6 {
+    flex: 1 1 100%;
+  }
+
+  .sevai-wrapper {
+    padding: 20px 10px;
+  }
+}

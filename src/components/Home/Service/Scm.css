@@ -1,0 +1,143 @@
+/* ============ SCM Theme ============ */
+
+/* Breadcrumb */
+.scm-breadcrumb {
+  background-color: #f5f5f5;
+  padding: 15px 0;
+  font-size: 16px;
+}
+
+.scm-breadcrumb .container {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.scm-breadcrumb .text a {
+  color: #2c2b2b;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.scm-breadcrumb .text a:hover {
+  color: #ffb300;
+}
+
+.scm-breadcrumb .text i {
+  margin: 0 10px;
+  color: #999;
+}
+
+/* Service Details */
+.scm-details {
+  padding: 60px 0;
+  background-color: #fff;
+}
+
+.scm-details .scm-col {
+  width: 100%;
+}
+
+.scm-sidebar-details {
+  background: #ffffff;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+/* Title Section */
+.scm-content-style-one {
+  margin-bottom: 30px;
+}
+
+.scm-content-style-one .scm-title {
+  font-size: 26px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #22345f;
+  border-left: 5px solid #ffaa00;
+  padding-left: 10px;
+}
+
+/* Paragraphs */
+.scm-content-style-one .scm-text p {
+  font-size: 16px;
+  color: #444;
+  line-height: 2;
+  margin-bottom: 15px;
+}
+
+/* Section Block with Image or List */
+.scm-content-style-two {
+  margin: 30px 0;
+}
+
+.scm-content-style-two h4 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #22345f;
+}
+
+/* List Styling */
+.scm-content-style-two .scm-list {
+  padding-left: 20px;
+  list-style: none;
+}
+
+.scm-content-style-two .scm-list li {
+  margin-bottom: 8px;
+  position: relative;
+  padding-left: 20px;
+  color: #444;
+  margin-top: 30px;
+}
+
+.scm-content-style-two .scm-list li::before {
+  content: "❯";
+  color: #f6b129;
+  position: absolute;
+  left: 0;
+  font-size: 14px;
+}
+
+/* Image Box */
+.img-box figure {
+  margin: 0;
+}
+
+.img-box img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Utility */
+.centered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .scm-title {
+    font-size: 22px;
+  }
+
+  .scm-text p {
+    font-size: 15px;
+    line-height: 1.8;
+  }
+
+  .scm-list li {
+    padding-left: 18px;
+  }
+
+  .scm-list li::before {
+    font-size: 12px;
+  }
+}

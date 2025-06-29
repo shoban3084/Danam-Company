@@ -1,0 +1,150 @@
+/* Banner Section */
+.testing-banner.centered {
+  background-size: cover;
+  background-position: center;
+  padding: 150px 0;
+  color: #000000;
+  text-align: center;
+  font-size: 36px;
+  font-weight: 800;
+}
+
+/* Breadcrumb */
+.testing-breadcrumb {
+  background-color: #f5f5f5;
+  padding: 15px 0;
+  font-size: 16px;
+}
+
+.testing-breadcrumb .container {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.testing-breadcrumb .text a {
+  color: #2c2b2b;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.testing-breadcrumb .text a:hover {
+  color: #ffb300; 
+}
+
+.testing-breadcrumb .text i {
+  margin: 0 10px;
+  color: #999;
+}
+
+/* Main Wrapper */
+.testing-details {
+  padding: 40px 0;
+  background: #fff;
+}
+
+/* Section Title with Border */
+.testing-details .title {
+  font-size: 24px;
+  font-weight: 800;
+  color: #83868e;
+  text-align: left;
+  border-left: 5px solid #f6b129;
+  padding-left: 15px;
+  margin-bottom: 20px;
+}
+
+/* Fixed: h4 heading inside content-style-two */
+.testing-details .content-style-two h4 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #22345f !important;  /* override any orange styling */
+}
+
+/* Paragraphs */
+.testing-details .text {
+  font-size: 16px;
+  color: #444;
+  margin-bottom: 20px;
+  line-height: 1.8;
+}
+
+/* List Style */
+.testing-details .list {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 20px;
+}
+
+.testing-details .list li {
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 10px;
+}
+
+.testing-details .list li::before {
+  content: '\f0da';
+  font-family: 'FontAwesome';
+  position: absolute;
+  left: 0;
+  color: #f6b129;
+}
+
+/* Grid */
+.container {
+  width: 100%;
+  margin: auto;
+  max-width: 1200px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.col {
+  flex: 1 1 48%;
+  min-width: 300px;
+}
+
+.testing-col {
+  width: 100%;
+}
+
+/* Content Box Styles */
+.content-style-one {
+  margin-bottom: 40px;
+}
+
+.content-style-two {
+  margin-top: 20px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .testing-banner.centered {
+    font-size: 28px;
+    padding: 60px 0;
+  }
+
+  .col {
+    flex: 1 1 100%;
+  }
+
+  .testing-details {
+    padding: 20px 10px;
+  }
+
+  .testing-details .title {
+    font-size: 24px;
+  }
+
+  .testing-details .content-style-two h4 {
+    font-size: 20px;
+  }
+}

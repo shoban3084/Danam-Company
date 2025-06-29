@@ -31,7 +31,6 @@
   height: 4px;
   background: #f4b728;
   margin: 15px auto 0;
-  padding-left: 1140px;
 }
 
 .feature-row {
@@ -42,12 +41,13 @@
 }
 
 .feature-box {
-  width: 100%;
-  max-width: 32%;
+  flex: 1 1 calc(33.333% - 20px);
+  max-width: calc(33.333% - 20px);
   background: #fff;
   border: 1px solid #eee;
-  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
   transition: 0.3s;
+  box-sizing: border-box;
 }
 
 .feature-box:hover {
@@ -92,4 +92,61 @@
 .feature-content a {
   color: #000;
   text-decoration: none;
+}
+
+/* ==================== Responsive Styles ==================== */
+
+/* Tablet View */
+@media (max-width: 991px) {
+  .feature-box {
+    flex: 1 1 calc(50% - 20px);
+    max-width: calc(50% - 20px);
+  }
+
+  .feature-title h2 {
+    font-size: 28px;
+  }
+
+  .feature-title p {
+    font-size: 15px;
+  }
+
+  .feature-content h4 {
+    font-size: 16px;
+  }
+
+  .feature-content p {
+    font-size: 13px;
+  }
+}
+
+/* Mobile View */
+@media (max-width: 600px) {
+  .feature-box {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+
+  .feature-title h2 {
+    font-size: 24px;
+  }
+
+  .feature-title p {
+    font-size: 14px;
+  }
+
+  .feature-content h4 {
+    font-size: 15px;
+  }
+
+  .feature-content p {
+    font-size: 13px;
+  }
+
+  .feature-icon {
+    top: -20px;
+    left: 15px;
+    font-size: 16px;
+    padding: 10px;
+  }
 }

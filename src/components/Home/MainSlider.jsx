@@ -1,18 +1,21 @@
-import React, { useEffect, useState } from 'react';
-import slides from "../../data/sliderData";
+import React, { useEffect, useState, useRef } from 'react';
+import slides from '../../data/sliderData';
 import './MainSlider.css';
 
 const MainSlider = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
-  const slideDuration = 5000; // 5 seconds per slide
+  const [isPaused, setIsPaused] = useState(false);
+  const intervalRef = useRef(null);
+  const slideDuration = 5000; // 5 seconds
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % slides.length);
-    }, slideDuration);
-
-    return () => clearInterval(interval);
-  }, [slides.length]);
+    if (!isPaused) {
+      intervalRef.current = setInterval(() => {
+        setCurrentSlide((prev) => (prev + 1) % slides.length);
+      }, slideDuration);
+    }
+    return () => clearInterval(intervalRef.current);
+  }, [isPaused, slides.length]);
 
   const handlePrev = () => {
     setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
@@ -20,6 +23,10 @@ const MainSlider = () => {
 
   const handleNext = () => {
     setCurrentSlide((prev) => (prev + 1) % slides.length);
+  };
+
+  const togglePause = () => {
+    setIsPaused((prev) => !prev);
   };
 
   return (
@@ -38,6 +45,9 @@ const MainSlider = () => {
               ))}
             </h1>
             <p className="slide-subtitle">{slide.subtitle}</p>
+            {slide.subtitle2 && (
+              <p className="slide-subtitle secondary">{slide.subtitle2}</p>
+            )}
             <div className="slide-buttons">
               {slide.buttons.map((btn, i) => (
                 <a key={i} href={btn.link} className="btn-two">
@@ -49,7 +59,7 @@ const MainSlider = () => {
         </div>
       ))}
 
-      {/* Previous / Next Controls */}
+      {/* Prev / Next Buttons */}
       <button className="slider-arrow prev" onClick={handlePrev}>
         ❮
       </button>
@@ -60,11 +70,16 @@ const MainSlider = () => {
       {/* Timer Bar */}
       <div className="timer-bar">
         <div
-          key={currentSlide} // Forces re-render on slide change to restart animation
+          key={currentSlide}
           className="timer-progress"
           style={{ animationDuration: `${slideDuration}ms` }}
         />
       </div>
+
+      {/* Pause / Play Button */}
+      <button className="pause-play-button" onClick={togglePause}>
+        {isPaused ? '▶️' : '⏸️'}
+      </button>
     </div>
   );
 };

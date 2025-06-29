@@ -1,0 +1,106 @@
+/* ============ SAP Solution Theme ============ */
+
+/* Breadcrumb */
+.sapsolution-breadcrumb {
+  background-color: #f5f5f5;
+  padding: 15px 0;
+  font-size: 16px;
+}
+
+.sapsolution-breadcrumb .container {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.sapsolution-breadcrumb .text a {
+  color: #2c2b2b;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.sapsolution-breadcrumb .text a:hover {
+  color: #ffb300;
+}
+
+.sapsolution-breadcrumb .text i {
+  margin: 0 10px;
+  color: #999;
+}
+
+/* Service Details */
+.sapsolution-details {
+  padding: 60px 0;
+  background-color: #fff;
+}
+
+.sapsolution-details .sapsolution-col {
+  width: 100%;
+}
+
+.sapsolution-sidebar-details {
+  background: #ffffff;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+.sapsolution-content-style-one {
+  margin-bottom: 30px;
+}
+
+.sapsolution-content-style-one .sapsolution-title {
+  font-size: 26px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #22345f;
+  border-left: 5px solid #ffaa00;
+  padding-left: 10px;
+}
+
+.sapsolution-content-style-one .sapsolution-text p {
+  font-size: 16px;
+  color: #444;
+  line-height: 2.7;
+  margin-bottom: 15px;
+}
+
+.sapsolution-content-style-two {
+  margin: 30px 0;
+}
+
+.sapsolution-content-style-two h4 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #f6b129;
+}
+
+.sapsolution-content-style-two .sapsolution-list {
+  padding-left: 20px;
+}
+
+.sapsolution-content-style-two .sapsolution-list li {
+  margin-bottom: 8px;
+  position: relative;
+  padding-left: 20px;
+  color: #444;
+}
+
+.sapsolution-content-style-two .sapsolution-list li::before {
+  content: "❯";
+  color: #f6b129;
+  position: absolute;
+  left: 0;
+  font-size: 14px;
+}
+
+/* Utility */
+.centered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}

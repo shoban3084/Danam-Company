@@ -9,6 +9,7 @@ body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-color: #f9f9f9;
   color: #222;
+  padding-top: 120px; /* 60px for topbar + 60px for lowerbar */
 }
 
 /* ===== Container ===== */
@@ -16,6 +17,7 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 1rem;
+  overflow: hidden;
 }
 
 /* ===== Logo Styling ===== */
@@ -53,6 +55,7 @@ body {
   display: flex;
   gap: 30px;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .main-menu ul li {
@@ -101,8 +104,37 @@ body {
   color: #facc15; 
 }
 
+/* ===== Topbar Wrapper ===== */
+.topbar-wrapper {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: #22345F;
+  height: 60px; /* Ensure consistent topbar height */
+}
+
+/* ===== Lowerbar Fixed Positioning (for sticky) ===== */
+.lowerbar-fixed {
+  position: fixed;
+  top: 60px; /* Exactly after topbar */
+  width: 100%;
+  z-index: 999;
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
 /* ===== Responsive Styles ===== */
-@media (max-width: 768px) {
+
+/* Tablets and smaller */
+@media (max-width: 991px) {
+  .header-upper .container,
+  .header-lower .container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
   .main-menu ul {
     flex-direction: column;
     align-items: flex-start;
@@ -113,29 +145,54 @@ body {
     position: static;
     display: none;
     box-shadow: none;
+    padding-left: 1rem;
   }
 
   .main-menu ul li:hover ul {
     display: block;
   }
 
-  .header-upper .container,
-  .header-lower .container {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 1rem;
-  }
-
   .logo-box {
     margin-bottom: 1rem;
   }
 }
-.topbar-wrapper {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 1000;
-  background-color: #22345F;
+
+/* Mobile phones (≤576px) */
+@media (max-width: 576px) {
+  .main-menu a {
+    font-size: 14px;
+    padding: 8px 0;
+  }
+
+  .main-menu ul {
+    gap: 0.5rem;
+  }
+
+  .main-menu ul li {
+    width: 100%;
+  }
+
+  .main-menu ul li ul li {
+    padding: 0.25rem 0.5rem;
+  }
+
+  .container {
+    padding: 0 0.8rem;
+  }
+
+  .logo-box img {
+    max-height: 30px;
+  }
 }
 
+/* Extra small devices (≤400px) */
+@media (max-width: 400px) {
+  .main-menu a {
+    font-size: 13px;
+  }
 
+  .header-upper .container,
+  .header-lower .container {
+    padding: 15px 0;
+  }
+}

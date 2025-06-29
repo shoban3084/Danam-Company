@@ -6,31 +6,32 @@ const slides = [
   {
     id: 1,
     image: image1,
-    title: "Transform Your Business with SAP",
-    subtitle: "Expert SAP Application Consulting to elevate your business processes",
+    title: "Transform Your Business with SevAI",
+    subtitle: "DEP-Digital Enterprise Platform with Next GEN-ERP",
+    subtitle2: "Expert SevAI Application Consulting to elevate your business processes",
     buttons: [
-      { label: "Services", link: "/service.html" },
-      { label: "Industries", link: "/service-details.html" }
+      { label: "Services", link: "/services" },          
+      { label: "Industries", link: "/industries" }      
     ]
   },
   {
     id: 2,
-    image: image2, 
-    title: "Drive Innovation\nwith SAP Solutions",
-    subtitle: "Leverage best practices in SAP for enterprise-grade efficiency",
+    image: image2,
+    title: "Drive Innovation\nwith SevAI - DEP Next GEN-ERP",
+    subtitle: "Leverage best practices in SevATBEP for enterprise-grade efficiency",
     buttons: [
-      { label: "Services", link: "/service.html" },
-      { label: "Industries", link: "/service-details.html" }
+      { label: "Services", link: "/services" },
+      { label: "Industries", link: "/industries" }
     ]
   },
   {
     id: 3,
-    image: image3, 
+    image: image3,
     title: "First AI Powered Dep-Digital Enterprise Platform",
-    subtitle: "Supporting SevAIBEP Next GEN-ERP",
+    subtitle: "Supporting SevAI - DEP Next GEN-ERP",
     buttons: [
-      { label: "Services", link: "/service.html" },
-      { label: "Industries", link: "/service-details.html" }
+      { label: "Services", link: "/services" },
+      { label: "Industries", link: "/industries" }
     ]
   }
 ];

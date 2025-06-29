@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './FeatureSection.css';
 import feature1 from '../../assets/feature1.jpg';
 import feature2 from '../../assets/feature2.jpg';
@@ -10,21 +11,21 @@ const features = [
     icon: 'fa-building',
     title: 'Data Warehousing & Decision Support Services',
     desc: 'The growth of information and the outburst of both structured and unstructured data has given rise to poor data quality when it ...',
-    link: 'Data-Warehousing-BI.html',
+    link: '/industries/professional-services',
   },
   {
     img: feature2,
     icon: 'fa-line-chart',
     title: 'Financial Planning & Consol',
     desc: 'Danam’s expertise in the area of Financial Planning and Consolidation is world class. It has one of the best implementation teams ...',
-    link: 'FI-CO-Solutions.html',
+    link: '/fico', // internal FICO route
   },
   {
     img: feature3,
     icon: 'fa-users',
     title: 'HCM',
     desc: 'Danam’s HCM implementation expertise reaches across many different Industry domains. This broad and deep domain expert ...',
-    link: 'HCM-Solutions.html',
+    link: '/Hcm',
   }
 ];
 
@@ -44,7 +45,7 @@ const FeatureSection = () => {
               <div className="feature-content">
                 <div className="feature-icon"><i className={`fa ${item.icon}`}></i></div>
                 <h4>{item.title}</h4>
-                <p>{item.desc} <b><a href={item.link}>[more]</a></b></p>
+                <p>{item.desc} <b><Link to={item.link}>[more]</Link></b></p>
               </div>
             </div>
           ))}

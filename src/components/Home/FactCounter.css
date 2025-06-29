@@ -1,86 +1,96 @@
-/* Section with background image */
 .fact-counter {
-  background-size:auto;
+  position: relative;
+  width: 100%;
+  padding: 60px 0;
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  position: relative;
-  min-height: 300px;
-  min-width: 100px;
-  font-family: Arial, sans-serif;
+  font-family: 'Montserrat', sans-serif;
   color: #fff;
   text-align: center;
+  z-index: 1;
 }
 
-/* Blue overlay on top of image */
 .fact-counter .overlay {
-  background-color: rgba(0, 34, 85, 0.8); /* dark blue transparent */
-  width: 100%;
-  height: 100%;
-  padding: auto;
+  position: relative;
+  z-index: 2;
 }
 
-/* Layout container */
 .container {
-  max-width: 120px;
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 8px 20px;
+  padding: 0 20px;
 }
 
-/* Row for the counters */
 .row {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 20px;
+}
+
+.column {
+  flex: 1 1 22%;
+  min-width: 220px;
+}
+
+.count-box {
+  background: #ffffff;
+  padding: 40px 20px 30px;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  color: #000;
+}
+
+.count-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+}
+
+.icon {
+  font-size: 40px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
   align-items: center;
 }
 
-/* Each counter column */
-.column {
-  flex: 1 1 22%;
-  margin: 10px;
-  min-width: 200px;
+/* Targeting Material UI SVG icons inside icon div */
+.fact-icon {
+  fill: #f6b129 !important;
+  color: #f6b129 !important;
+  font-size: 40px !important;
 }
 
-/* Counter card */
-.count-box {
-  border: 1px solid rgba(255, 255, 255, 0.4);
-  padding: 30px 15px;
-  border-radius: 6px;
-  background: transparent;
-}
-
-/* Big yellow number */
 .count-number {
-  font-size: 90px;
-  font-weight: bold;
-  color: #fbc02d;
+  font-size: 50px;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: #f6b129;
 }
 
 .plus {
   font-size: 20px;
-  color: #fbc02d;
+  margin-left: 4px;
+  color: #f6b129;
 }
 
-/* Description */
 .count-label {
-  margin-top: 90px;
-  font-size: 16px;
-  color: #fff;
+  font-size: 15px;
+  line-height: 24px;
+  color: #333;
 }
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  .row {
-    justify-content: center;
-  }
-
+/* Responsive Breakpoints */
+@media (max-width: 992px) {
   .column {
     flex: 1 1 45%;
-    margin: 10px;
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 576px) {
   .column {
     flex: 1 1 100%;
   }

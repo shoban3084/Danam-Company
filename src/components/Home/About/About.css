@@ -1,31 +1,60 @@
 .about-bg {
-  background-size: cover;
-  background-position: center;
-  padding: 100px 0;
-  text-align: center;
+  background-size: cover;              
+  background-repeat: no-repeat;
+  background-position: center 35%;  
+  width: 100%;
+  padding: 120px 0; /* 🔽 Reduced */
+  position: relative;
   color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-
 .about-bg .text {
-  font-size: 48px;
-  font-weight: bold;
   color: rgb(0, 0, 0);
-  padding-bottom: 10%;
+  font-size: 42px;
+  font-weight: 700;
+  text-shadow: 0px 2px 6px rgba(0, 0, 0, 0.6);
+  z-index: 1;
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-align: center;
 }
 
-.bread-crumb {
-  background: #f2f2f2;
-  padding: 10px 0;
-}
-
-.bread-crumb .text {
+.about-breadcrumb {
+  background-color: #f5f5f5;
+  padding: 15px 0;
   font-size: 16px;
-  color: #333;
+}
+
+.about-breadcrumb .container {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.about-breadcrumb .text a {
+  color: #2c2b2b;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.about-breadcrumb .text a:hover {
+  color: #ffb300; 
+}
+
+.about-breadcrumb .text i {
+  margin: 0 10px;
+  color: #999;
 }
 
 .about-section {
-  padding: 70px 0;
+  padding: 80px 0;
   background-color: #fff;
+  padding-left: 4%;
 }
 
 .about-section .row {
@@ -75,3 +104,4 @@
   background-color: #ffb600;
   margin-left: 20px;
 }
+

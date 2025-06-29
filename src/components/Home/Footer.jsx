@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import "./Footer.css";
 import infoImage from "../../assets/danam.jpg";
+import { Link, useNavigate } from 'react-router-dom';
+
 import {
   FaFacebookF,
   FaTwitter,
@@ -10,6 +12,8 @@ import {
 } from "react-icons/fa";
 
 export default function Footer() {
+  const navigate = useNavigate();
+
   const handleSubscribe = () => {
     alert("Successfully Registered");
   };
@@ -36,10 +40,15 @@ export default function Footer() {
     });
   };
 
+  const goToAbout = () => {
+    navigate('/About');
+  };
+
   return (
     <div className="fixed-footer-wrapper">
       <footer className="footer">
         <div className="footer-container">
+
           {/* Column 1 */}
           <div className="footer-column">
             <img src={infoImage} alt="Info" className="footer-logo" />
@@ -48,18 +57,18 @@ export default function Footer() {
               Princeton, NJ. We have an offshore facility, Danam Infotech Pvt
               Ltd, in Chennai, India.
             </p>
-            <button className="about-button">ABOUT US</button>
+            <button className="about-button" onClick={goToAbout}>ABOUT US</button>
           </div>
 
           {/* Column 2 */}
           <div className="footer-column">
             <h4 className="footer-title">Services</h4>
             <ul className="footer-list">
-              <li><a href="service.html">Services</a></li>
-              <li><a href="SAP-Implementation.html">SAP Implementation</a></li>
-              <li><a href="HCM-Solutions.html">HCM Solutions</a></li>
-              <li><a href="SCM-Solution.html">SCM Solutions</a></li>
-              <li><a href="CRM-Solutions.html">CRM Solutions</a></li>
+              <li><Link to="/services">Services</Link></li>
+              <li><Link to="/SevAI">Sev AI Implementation</Link></li>
+              <li><Link to="/Hcm">HCM Solutions</Link></li>
+              <li><Link to="/Scm">SCM Solutions</Link></li>
+              <li><Link to="/Crm">CRM Solutions</Link></li>
             </ul>
           </div>
 
@@ -67,11 +76,11 @@ export default function Footer() {
           <div className="footer-column">
             <h4 className="footer-title">Quick Link</h4>
             <ul className="footer-list">
-              <li><a href="index.html">Home</a></li>
-              <li><a href="about.html">About Us</a></li>
-              <li><a href="contact.html">Contact Us</a></li>
-              <li><a href="service.html">Services</a></li>
-              <li><a href="careers.html">Careers</a></li>
+              <li><Link to="/">Home</Link></li>
+              <li><Link to="/About">About Us</Link></li>
+              <li><Link to="/Contact">Contact Us</Link></li>
+              <li><Link to="/Industries">Industries</Link></li>
+              <li><Link to="/Careers">Careers</Link></li>
             </ul>
           </div>
 
@@ -90,13 +99,14 @@ export default function Footer() {
               <a href="#"><FaLinkedinIn /></a>
             </div>
           </div>
+
         </div>
       </footer>
 
       <section className="footer-bottom">
         <div className="container">
           <p className="copyright">
-            © 2014 Danam Consulting. All rights reserved || Designed by{" "}
+            Copyright © 2014 Danam Consulting. All rights reserved || Designed by{" "}
             <a href="https://www.appinous.com" target="_blank" rel="noopener noreferrer">
               Appinous Technology
             </a>
