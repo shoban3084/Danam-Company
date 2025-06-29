@@ -1,6 +1,6 @@
 import './Sap.css';
 import sapPhase from '../../../assets/sap-phase.jpg';
-import sapPlanning from '../../../assets/SAP-planning.jpg';
+import sapPlanning from '../../../assets/temp.jpg';
 import processMap from '../../../assets/process-map.png';
 import TopBar from '../TopBar';
 import LowerBar from '../LowerBar';
