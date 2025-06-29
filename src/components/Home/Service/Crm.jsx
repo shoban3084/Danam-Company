@@ -1,5 +1,5 @@
 import "./Crm.css";
-import CrmImage from "../../../assets/crm.png";
+import CrmImage from "../../../assets/Crm.png";
 import TopBar from "../TopBar";
 import LowerBar from "../LowerBar";
 import Footer from "../Footer";
