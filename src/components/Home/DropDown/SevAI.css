@@ -11,19 +11,33 @@
 
 /* Breadcrumb (NavBar) */
 .NavBar {
-  background: #ffffff;
+  background-color: #5e5e5e;
   padding: 15px 0;
-  font-size: 14px;
+  font-size: 16px;
 }
+
+.NavBar .container {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
 .NavBar .text a {
+  color: #020202;
   text-decoration: none;
-  color: #000;
-  font-weight: 500;
-  margin: 0 5px;
+  font-weight: 600;
+  transition: color 0.2s ease;
 }
+
+.NavBar .text a:hover {
+  color: #ffb300; 
+}
+
 .NavBar .text i {
-  margin: 0 5px;
-  color: #aaa;
+  margin: 0 10px;
+  color: #999;
 }
 
 /* Wrapper Section */
@@ -37,7 +51,7 @@
   font-size: 28px;
   font-weight: 900;
   margin-bottom: 20px;
-  color: #ffaa00;
+  color: #000000;
   border-left: 5px solid #ffaa00;
   padding-left: 15px;
 }
@@ -57,10 +71,10 @@
 }
 
 /* Headings in Content */
-.content-style-two h4 {
+.sevai-wrapper .content-style-two h4 {
   font-size: 22px;
-  margin-bottom: 15px;
-  color: #333;
+  margin-bottom: 20px;
+  color: #000000;
   border-left: 5px solid #ffaa00;
   padding-left: 10px;
 }
@@ -74,7 +88,7 @@
 .sevai-list li {
   padding-left: 20px;
   position: relative;
-  margin-bottom: 10px;
+  margin-bottom: 25px;
 }
 .sevai-list li::before {
   content: "❯";
@@ -82,6 +96,7 @@
   position: absolute;
   left: 0;
   color: #f6b129;
+  margin-top: -5px;
 }
 
 /* Image Styling */
@@ -117,6 +132,7 @@
   flex-direction: column;
   justify-content: flex-start;
   padding-top: 20px;
+  margin-top: 40px;
 }
 
 /* Custom Colors */

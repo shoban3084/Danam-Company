@@ -2,10 +2,12 @@ import LowerBar from "../LowerBar";
 import TopBar from "../TopBar";
 import Footer from "../Footer";
 import "./Contact.css";
-import bannerImg from "../../../assets/contact.avif";
+import bannerImg from "../../../assets/contact.jpg";
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import PublicIcon from '@mui/icons-material/Public';
 import PhoneIcon from '@mui/icons-material/Phone';
+import '@fortawesome/fontawesome-free/css/all.min.css';
+
 
 const Contact = () => {
   return (
@@ -14,10 +16,14 @@ const Contact = () => {
       <LowerBar />
 
       {/* Banner */}
-      <div
+        <div
         className="Contact-bg centered"
         style={{ backgroundImage: `url(${bannerImg})` }}
-      ></div>
+      >
+        <div className="text">Contact Us</div>
+      </div>
+      
+
 
       {/* Breadcrumb */}
       <div className="contact-breadcrumb">

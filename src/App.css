@@ -1,4 +1,3 @@
-
 *,
 *::before,
 *::after {
@@ -12,5 +11,9 @@ html, body {
   padding-top: 30px;
   margin: 0;
   overscroll-behavior: none;
-  touch-action: manipulation; 
+  touch-action: manipulation;
+
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 900;      /* Black */
+  font-style: italic;    /* Italic */
 }

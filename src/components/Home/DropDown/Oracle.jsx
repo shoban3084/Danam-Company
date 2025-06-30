@@ -18,7 +18,7 @@ const Oracle = () => {
       </div>
 
       {/* Breadcrumb Section */}
-      <div className="NavBar">
+      <div className="Oracle-breadcrumb">
         <div className="container">
           <div className="text">
             <a href="/">Home</a>

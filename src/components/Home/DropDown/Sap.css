@@ -1,12 +1,11 @@
 .sap-bg {
   background-size: cover;
   background-position: center;
-  padding: 100px 0;
+  padding: 200px 0 100px; /* Instead of using padding and padding-top separately */
   color: #000000;
   text-align: center;
   font-size: 36px;
   font-weight: 600;
-  padding-top: 200px;
   height: 300px;
 }
 
@@ -105,6 +104,13 @@
 .col-md-6 {
   flex: 1 1 48%;
   min-width: 300px;
+}
+
+.col-md-6 p {
+  font-size: 16px;
+  color: #444;
+  line-height: 1.8;
+  margin-bottom: 16px;
 }
 
 /* Custom Colors */

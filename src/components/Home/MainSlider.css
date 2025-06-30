@@ -110,19 +110,19 @@
   display: inline-block;
   margin-right: 15px;
   padding: 12px 35px;
-  background: orange;
-  color: #fff;
+  background: rgb(252, 251, 250);
+  color: rgb(0, 0, 0);
   font-weight: bold;
   text-decoration: none;
   border-radius: 5px;
-  border: 1px solid orange;
+  border: 1px solid rgb(0, 0, 0);
   transition: all 0.3s ease;
 }
 
 .btn-two:hover {
-  background: #fff;
+  background: orange;
   color: #000;
-  border-color: #fff;
+  border-color: orange;
 }
 
 /* Arrows */

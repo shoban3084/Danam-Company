@@ -1,7 +1,6 @@
-import backgroundImage from '../../assets/image3.jpg';
+import backgroundImage from '../../assets/ai.jpg';
 import './FactCounter.css';
 import CountUp from 'react-countup';
-
 import AccessTimeIcon from '@mui/icons-material/AccessTime';
 import WorkIcon from '@mui/icons-material/Work';
 import EmojiEmotionsIcon from '@mui/icons-material/EmojiEmotions';

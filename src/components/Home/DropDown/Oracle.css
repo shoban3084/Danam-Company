@@ -6,7 +6,7 @@
   background-repeat: no-repeat;
   position: relative;
   padding-top: 200px;
-  color: #000000;
+  color: #ffffff;
   text-align: center;
   font-size: 36px;
   font-weight: 600;
@@ -14,24 +14,32 @@
 }
 
 /* Breadcrumb */
-.NavBar {
+.Oracle-breadcrumb {
   background-color: #f5f5f5;
   padding: 15px 0;
   font-size: 16px;
 }
-.NavBar .container {
+
+.Oracle-breadcrumb .container {
   max-width: 1200px;
   margin: auto;
   display: flex;
   align-items: center;
   justify-content: flex-start;
 }
-.NavBar .text a {
-  color: #f6b129;
+
+.Oracle-breadcrumb .text a {
+  color: #2c2b2b;
   text-decoration: none;
   font-weight: 600;
+  transition: color 0.2s ease;
 }
-.NavBar .text i {
+
+.Oracle-breadcrumb .text a:hover {
+  color: #ffb300; 
+}
+
+.Oracle-breadcrumb .text i {
   margin: 0 10px;
   color: #999;
 }

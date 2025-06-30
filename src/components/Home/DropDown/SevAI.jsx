@@ -6,6 +6,7 @@ import TopBar from '../TopBar';
 import LowerBar from '../LowerBar';
 import Footer from '../Footer';
 import bannerImg from '../../../assets/dep-banner.jpg';
+import '@fortawesome/fontawesome-free/css/all.min.css';
 
 const Sevai = () => {
   return (

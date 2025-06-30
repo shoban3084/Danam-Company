@@ -1,6 +1,6 @@
 import React from "react";
 import "./CallBack.css";
-import rightImage from "../../assets/image3.jpg"; 
+import rightImage from "../../assets/CallBackImg.jpg"; 
 
 export default function CallBack() {
   return (
