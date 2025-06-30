@@ -3,7 +3,6 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://shoban3084.github.io/Danam-WebPage",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
