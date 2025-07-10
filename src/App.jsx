@@ -67,7 +67,6 @@ function RouteChangeHandler() {
         <Route path="/Ifrs" element={<Ifrs />} />
         <Route path="/Scm" element={<Scm />} />
         <Route path="/Crm" element={<Crm />} />
-
       </Routes>
     </>
   );
