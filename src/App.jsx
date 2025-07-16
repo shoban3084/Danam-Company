@@ -33,10 +33,9 @@ function RouteChangeHandler() {
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    // Scroll to top on route change
+
     window.scrollTo(0, 0);
 
-    // Show loader when route changes
     setLoading(true);
 
     const timeout = setTimeout(() => {

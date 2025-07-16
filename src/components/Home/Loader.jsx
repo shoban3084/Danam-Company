@@ -1,12 +1,10 @@
 import React from 'react';
 import './Loader.css';
 
-const Loader = () => {
+export default function Loader() {
   return (
-    <div className="loader-container">
-      <div className="gold-spinner"></div>
+    <div className="loader-wrapper">
+      <div className="loader"></div>
     </div>
   );
-};
-
-export default Loader;
+}
