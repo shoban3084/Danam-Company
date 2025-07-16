@@ -129,7 +129,7 @@
 @media (max-width: 768px) {
   .testing-banner.centered {
     font-size: 28px;
-    padding: 60px 0;
+    padding: 120px 0; /* Increased from 60px to 120px to push image/text lower */
   }
 
   .col {

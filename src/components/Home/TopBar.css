@@ -9,7 +9,7 @@ body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-color: #f9f9f9;
   color: #222;
-  padding-top: 120px; /* 60px for topbar + 60px for lowerbar */
+  padding-top: 100px; 
 }
 
 /* ===== Container ===== */
@@ -104,6 +104,18 @@ body {
   color: #facc15; 
 }
 
+.social-icons {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.social-icons li svg {
+  color: orange;
+  cursor: pointer;
+}
+
+
 /* ===== Topbar Wrapper ===== */
 .topbar-wrapper {
   position: fixed;
@@ -111,88 +123,45 @@ body {
   width: 100%;
   z-index: 1000;
   background-color: #22345F;
-  height: 60px; /* Ensure consistent topbar height */
+  height: 60px; 
 }
 
 /* ===== Lowerbar Fixed Positioning (for sticky) ===== */
 .lowerbar-fixed {
   position: fixed;
-  top: 60px; /* Exactly after topbar */
+  top: 60px; 
   width: 100%;
   z-index: 999;
   background: rgba(255, 255, 255, 0.95);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* ===== Responsive Styles ===== */
-
-/* Tablets and smaller */
-@media (max-width: 991px) {
-  .header-upper .container,
-  .header-lower .container {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 1rem;
+@media (max-width: 768px) {
+  html, body {
+    margin: 0;
+    padding: 0;
+    background-color: #22345F; 
+    box-sizing: border-box;
   }
 
-  .main-menu ul {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 1rem;
+  .topbar-wrapper {
+    display: flex;
+    flex-direction: column;          
+    position: relative;                 
+    top: -40px;
+    width: 100%;                
+    background-color: #22345F;
+    z-index: 1000;
+    align-items: flex-start;           
+    box-sizing: border-box;
+    margin-bottom: 20px; 
   }
 
-  .main-menu ul li ul {
-    position: static;
-    display: none;
-    box-shadow: none;
-    padding-left: 1rem;
-  }
-
-  .main-menu ul li:hover ul {
-    display: block;
-  }
-
-  .logo-box {
-    margin-bottom: 1rem;
+  .social-icons {
+    margin-top: 20px;
+    gap: 30px; 
   }
 }
 
-/* Mobile phones (≤576px) */
-@media (max-width: 576px) {
-  .main-menu a {
-    font-size: 14px;
-    padding: 8px 0;
-  }
 
-  .main-menu ul {
-    gap: 0.5rem;
-  }
 
-  .main-menu ul li {
-    width: 100%;
-  }
-
-  .main-menu ul li ul li {
-    padding: 0.25rem 0.5rem;
-  }
-
-  .container {
-    padding: 0 0.8rem;
-  }
-
-  .logo-box img {
-    max-height: 30px;
-  }
-}
-
-/* Extra small devices (≤400px) */
-@media (max-width: 400px) {
-  .main-menu a {
-    font-size: 13px;
-  }
-
-  .header-upper .container,
-  .header-lower .container {
-    padding: 15px 0;
-  }
-}

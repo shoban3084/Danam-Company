@@ -137,15 +137,22 @@
   font-size: 18px;
 }
 
-/* Responsive Layout */
 @media (max-width: 768px) {
   .oracle-wrapper {
     padding: 20px 0;
   }
+
   .oracle-content {
     flex-direction: column;
   }
+
   .oracle-left, .oracle-right {
     width: 100%;
+  }
+
+  .oracle-bg.centered {
+    padding-top: 150px; /* Reduced from 250px to lift text up */
+    font-size: 28px;
+    height: 280px;
   }
 }

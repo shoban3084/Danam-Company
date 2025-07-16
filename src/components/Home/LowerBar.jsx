@@ -5,19 +5,26 @@ import './LowerBar.css';
 const LowerBar = () => {
   const [isSticky, setSticky] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [servicesOpen, setServicesOpen] = useState(false);
+  const [industriesOpen, setIndustriesOpen] = useState(false);
   const location = useLocation();
 
+  // Handle scroll sticky bar
   useEffect(() => {
-    const handleScroll = () => {
-      setSticky(window.scrollY > 60);
-    };
+    const handleScroll = () => setSticky(window.scrollY > 60);
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const isActiveIndustry = (industry) => {
-    return location.pathname === `/industries/${industry}`;
-  };
+  // Close dropdowns when hamburger menu is closed
+  useEffect(() => {
+    if (!menuOpen) {
+      setServicesOpen(false);
+      setIndustriesOpen(false);
+    }
+  }, [menuOpen]);
+
+  const isActiveIndustry = (industry) => location.pathname === `/industries/${industry}`;
 
   return (
     <div className={`lowerbar-container ${isSticky ? 'lowerbar-fixed' : ''}`}>
@@ -27,47 +34,64 @@ const LowerBar = () => {
         </NavLink>
       </div>
 
-      {/* Hamburger Menu */}
+      {/* Hamburger Icon */}
       <div className="hamburger-icon" onClick={() => setMenuOpen(!menuOpen)}>
         <span></span>
         <span></span>
         <span></span>
       </div>
 
+      {/* Navigation */}
       <nav className={`nav-menu ${menuOpen ? 'open' : ''}`}>
         <ul className="menu-list">
-          <li><NavLink to="/" className={({ isActive }) => isActive ? 'active-link' : ''}>Home</NavLink></li>
-          <li><NavLink to="/about" className={({ isActive }) => isActive ? 'active-link' : ''}>About Us</NavLink></li>
+          <li><NavLink to="/">Home</NavLink></li>
+          <li><NavLink to="/about">About Us</NavLink></li>
 
           <li className="dropdown">
-            <span>Services ▾</span>
-            <ul className="dropdown-menu">
-              <li><NavLink to="/SevAI" className={({ isActive }) => isActive ? 'active-link' : ''}>SevAI Implementation and Production Support</NavLink></li>
-              <li><NavLink to="/sap" className={({ isActive }) => isActive ? 'active-link' : ''}>SAP Implementation and Production Support</NavLink></li>
-              <li><NavLink to="/Oracle" className={({ isActive }) => isActive ? 'active-link' : ''}>Oracle Implementation and Production</NavLink></li>
-              <li><NavLink to="/TestingPractice" className={({ isActive }) => isActive ? 'active-link' : ''}>Testing Practice</NavLink></li>
+            <div
+              className="dropdown-toggle"
+              onClick={() => {
+                setServicesOpen(prev => !prev);
+                setIndustriesOpen(false);
+              }}
+            >
+              Services ▾
+            </div>
+            <ul className={`dropdown-menu ${servicesOpen ? 'show' : ''}`}>
+              <li><NavLink to="/SevAI">SevAI Implementation</NavLink></li>
+              <li><NavLink to="/sap">SAP Implementation</NavLink></li>
+              <li><NavLink to="/Oracle">Oracle Implementation</NavLink></li>
+              <li><NavLink to="/TestingPractice">Testing Practice</NavLink></li>
             </ul>
           </li>
 
           <li className="dropdown">
-            <span>Industries ▾</span>
-            <ul className="dropdown-menu">
-              <li><NavLink to="/industries/manufacturing" className={isActiveIndustry('manufacturing') ? 'active-link' : ''}>Manufacturing</NavLink></li>
-              <li><NavLink to="/industries/professional-services" className={isActiveIndustry('professional-services') ? 'active-link' : ''}>Professional Services</NavLink></li>
-              <li><NavLink to="/industries/oil-gas" className={isActiveIndustry('oil-gas') ? 'active-link' : ''}>Oil & Gas</NavLink></li>
-              <li><NavLink to="/industries/banking" className={isActiveIndustry('banking') ? 'active-link' : ''}>Banking & Insurance</NavLink></li>
-              <li><NavLink to="/industries/hospitality" className={isActiveIndustry('hospitality') ? 'active-link' : ''}>Hospitality</NavLink></li>
-              <li><NavLink to="/industries/life-science" className={isActiveIndustry('life-science') ? 'active-link' : ''}>Life Science</NavLink></li>
-              <li><NavLink to="/industries/high-tech" className={isActiveIndustry('high-tech') ? 'active-link' : ''}>High Tech</NavLink></li>
-              <li><NavLink to="/industries/construction" className={isActiveIndustry('construction') ? 'active-link' : ''}>Construction</NavLink></li>
-              <li><NavLink to="/industries/renewable" className={isActiveIndustry('renewable') ? 'active-link' : ''}>Renewable</NavLink></li>
-              <li><NavLink to="/industries/retail" className={isActiveIndustry('retail') ? 'active-link' : ''}>Retail</NavLink></li>
-              <li><NavLink to="/industries/utilities" className={isActiveIndustry('utilities') ? 'active-link' : ''}>Utilities</NavLink></li>
+            <div
+              className="dropdown-toggle"
+              onClick={() => {
+                setIndustriesOpen(prev => !prev);
+                setServicesOpen(false);
+              }}
+            >
+              Industries ▾
+            </div>
+            <ul className={`dropdown-menu ${industriesOpen ? 'show' : ''}`}>
+              <li><NavLink to="/industries/manufacturing">Manufacturing</NavLink></li>
+              <li><NavLink to="/industries/professional-services">Professional Services</NavLink></li>
+              <li><NavLink to="/industries/oil-gas">Oil & Gas</NavLink></li>
+              <li><NavLink to="/industries/banking">Banking</NavLink></li>
+              <li><NavLink to="/industries/hospitality">Hospitality</NavLink></li>
+              <li><NavLink to="/industries/life-science">Life Science</NavLink></li>
+              <li><NavLink to="/industries/high-tech">High Tech</NavLink></li>
+              <li><NavLink to="/industries/construction">Construction</NavLink></li>
+              <li><NavLink to="/industries/renewable">Renewable</NavLink></li>
+              <li><NavLink to="/industries/retail">Retail</NavLink></li>
+              <li><NavLink to="/industries/utilities">Utilities</NavLink></li>
             </ul>
           </li>
 
-          <li><NavLink to="/careers" className={({ isActive }) => isActive ? 'active-link' : ''}>Careers</NavLink></li>
-          <li><NavLink to="/contact" className={({ isActive }) => isActive ? 'active-link' : ''}>Contact Us</NavLink></li>
+          <li><NavLink to="/careers">Careers</NavLink></li>
+          <li><NavLink to="/contact">Contact Us</NavLink></li>
         </ul>
       </nav>
     </div>

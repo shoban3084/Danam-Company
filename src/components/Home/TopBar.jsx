@@ -55,10 +55,10 @@ export default function TopBar() {
             </li>
           </ul>
 
-          <ul style={{ display: 'flex', gap: '20px', alignItems: 'center' }}>
-            <li><FaFacebook style={{ color: 'orange', cursor: 'pointer' }} /></li>
-            <li><FaTwitter style={{ color: 'orange', cursor: 'pointer' }} /></li>
-            <li><FaLinkedin style={{ color: 'orange', cursor: 'pointer' }} /></li>
+          <ul className="social-icons">
+            <li><FaFacebook/></li>
+            <li><FaTwitter/></li>
+            <li><FaLinkedin/></li>
           </ul>
         </div>
       </div>
