@@ -1,3 +1,4 @@
+/* ========== General Styles ========== */
 .sponsors-section {
   padding: 60px 0;
   background: #f5f5f5;
@@ -28,6 +29,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 100%;
+  overflow-x: hidden;
 }
 
 .sponsors-slider {
@@ -38,6 +41,7 @@
   gap: 30px;
   scrollbar-width: none;
   white-space: nowrap;
+  width: 100%;
 }
 
 .sponsors-slider::-webkit-scrollbar {
@@ -54,6 +58,7 @@
   width: 150px;
   filter: grayscale(100%);
   transition: all 0.3s ease;
+  object-fit: contain;
 }
 
 .sponsors-slider img:hover {
@@ -61,38 +66,20 @@
   transform: scale(1.05);
 }
 
-/* ===================== Responsive Queries ===================== */
-
-/* Tablet View (≤991px) */
+/* ========== Responsive (All mobile up to 991px) ========== */
 @media (max-width: 991px) {
   .section-title h2 {
-    font-size: 28px;
-  }
-
-  .title-text p {
-    font-size: 15px;
-    padding: 0 20px;
-  }
-
-  .sponsors-slider {
-    gap: 20px;
-    padding: 20px 0;
-  }
-
-  .sponsors-slider img {
-    height: 70px;
-    width: 130px;
-  }
-}
-
-/* Mobile View (≤600px) */
-@media (max-width: 600px) {
-  .section-title h2 {
-    font-size: 24px;
+    font-size: 22px;
   }
 
   .title-text p {
     font-size: 14px;
+    padding: 0 10px;
+  }
+
+  .slider-wrapper {
+    justify-content: flex-start;
+    overflow-x: auto;
   }
 
   .sponsors-slider {
@@ -103,21 +90,5 @@
   .sponsors-slider img {
     height: 60px;
     width: 110px;
-  }
-}
-
-/* Extra Small Devices (≤400px) */
-@media (max-width: 400px) {
-  .section-title h2 {
-    font-size: 20px;
-  }
-
-  .title-text p {
-    font-size: 13px;
-  }
-
-  .sponsors-slider img {
-    height: 50px;
-    width: 90px;
   }
 }

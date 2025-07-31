@@ -102,14 +102,17 @@ select {
 
 /* ========== Responsive Queries ========== */
 
-/* Tablet (≤991px) */
+/* Tablet & Below (≤991px) — Hide image */
 @media (max-width: 991px) {
   .callback-container {
     flex-direction: column;
   }
 
-  .form-section,
   .image-section {
+    display: none;
+  }
+
+  .form-section {
     width: 100%;
     padding: 30px;
   }

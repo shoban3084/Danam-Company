@@ -9,14 +9,12 @@ const LowerBar = () => {
   const [industriesOpen, setIndustriesOpen] = useState(false);
   const location = useLocation();
 
-  // Handle scroll sticky bar
   useEffect(() => {
     const handleScroll = () => setSticky(window.scrollY > 60);
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Close dropdowns when hamburger menu is closed
   useEffect(() => {
     if (!menuOpen) {
       setServicesOpen(false);
@@ -24,7 +22,15 @@ const LowerBar = () => {
     }
   }, [menuOpen]);
 
-  const isActiveIndustry = (industry) => location.pathname === `/industries/${industry}`;
+  const toggleDropdown = (menuType) => {
+    if (menuType === 'services') {
+      setServicesOpen(!servicesOpen);
+      setIndustriesOpen(false);
+    } else if (menuType === 'industries') {
+      setIndustriesOpen(!industriesOpen);
+      setServicesOpen(false);
+    }
+  };
 
   return (
     <div className={`lowerbar-container ${isSticky ? 'lowerbar-fixed' : ''}`}>
@@ -34,27 +40,19 @@ const LowerBar = () => {
         </NavLink>
       </div>
 
-      {/* Hamburger Icon */}
       <div className="hamburger-icon" onClick={() => setMenuOpen(!menuOpen)}>
         <span></span>
         <span></span>
         <span></span>
       </div>
 
-      {/* Navigation */}
       <nav className={`nav-menu ${menuOpen ? 'open' : ''}`}>
         <ul className="menu-list">
           <li><NavLink to="/">Home</NavLink></li>
           <li><NavLink to="/about">About Us</NavLink></li>
 
           <li className="dropdown">
-            <div
-              className="dropdown-toggle"
-              onClick={() => {
-                setServicesOpen(prev => !prev);
-                setIndustriesOpen(false);
-              }}
-            >
+            <div className="dropdown-toggle" onClick={() => toggleDropdown('services')}>
               Services ▾
             </div>
             <ul className={`dropdown-menu ${servicesOpen ? 'show' : ''}`}>
@@ -66,13 +64,7 @@ const LowerBar = () => {
           </li>
 
           <li className="dropdown">
-            <div
-              className="dropdown-toggle"
-              onClick={() => {
-                setIndustriesOpen(prev => !prev);
-                setServicesOpen(false);
-              }}
-            >
+            <div className="dropdown-toggle" onClick={() => toggleDropdown('industries')}>
               Industries ▾
             </div>
             <ul className={`dropdown-menu ${industriesOpen ? 'show' : ''}`}>
