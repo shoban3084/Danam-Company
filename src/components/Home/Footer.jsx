@@ -106,10 +106,7 @@ export default function Footer() {
       <section className="footer-bottom">
         <div className="container">
           <p className="copyright">
-            Copyright © 2014 Danam Consulting. All rights reserved || Designed by{" "}
-            <a href="https://www.appinous.com" target="_blank" rel="noopener noreferrer">
-              Appinous Technology
-            </a>
+            Copyright © 2014 Danam Consulting. All rights reserved
           </p>
         </div>
       </section>
