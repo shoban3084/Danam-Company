@@ -1,9 +1,24 @@
+import { useState, useEffect } from 'react';
 import { FaFacebook, FaTwitter, FaLinkedin } from 'react-icons/fa';
 import './TopBar.css';
 import India from "../../assets/Flag/india.jpg";
 import USA from '../../assets/Flag/usa.jpg';
 
 export default function TopBar() {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    handleResize(); // Check on component mount
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  if (isMobile) return null;
+
   return (
     <div className="topbar-wrapper">
       <div style={{
@@ -43,7 +58,7 @@ export default function TopBar() {
                 fontWeight: 600
               }}>INDIA FLAG(+91 44 42156668)</span>
             </li>
-              <li style={{ display: 'flex', alignItems: 'center' }}>
+            <li style={{ display: 'flex', alignItems: 'center' }}>
               <img src={India} alt="India" style={{ width: '24px', marginRight: '8px' }} />
               <span style={{
                 backgroundColor: '#FACC15',
@@ -56,9 +71,9 @@ export default function TopBar() {
           </ul>
 
           <ul className="social-icons">
-            <li><FaFacebook/></li>
-            <li><FaTwitter/></li>
-            <li><FaLinkedin/></li>
+            <li><FaFacebook /></li>
+            <li><FaTwitter /></li>
+            <li><FaLinkedin /></li>
           </ul>
         </div>
       </div>

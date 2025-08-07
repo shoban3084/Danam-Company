@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
+import USA from '../../assets/Flag/usa.jpg';
+import India from '../../assets/Flag/india.jpg';
 import './LowerBar.css';
 
 const LowerBar = () => {
@@ -85,6 +87,26 @@ const LowerBar = () => {
           <li><NavLink to="/careers">Careers</NavLink></li>
           <li><NavLink to="/contact">Contact Us</NavLink></li>
         </ul>
+
+        {/* Contact Info Only for Mobile */}
+        {menuOpen && (
+          <div className="mobile-contact-info">
+            <ul className="flag-list">
+              <li>
+                <img src={USA} alt="USA" className="flag-img" />
+                <span className="flag-text">609-672-9356 (USA)</span>
+              </li>
+              <li>
+                <img src={India} alt="India" className="flag-img" />
+                <span className="flag-text">+91 44 42156668 (India)</span>
+              </li>
+              <li>
+                <img src={India} alt="India" className="flag-img" />
+                <span className="flag-text">+91 44 48562332 (India)</span>
+              </li>
+            </ul>
+          </div>
+        )}
       </nav>
     </div>
   );

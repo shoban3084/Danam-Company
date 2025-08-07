@@ -1,19 +1,18 @@
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
 html, body {
   width: 100%;
   max-width: 100%;
-  overflow-x: hidden;       
-  padding-top: 30px;
+  overflow-x: hidden;
   margin: 0;
   overscroll-behavior: none;
   touch-action: manipulation;
-
   font-family: 'Josefin Sans', sans-serif;
-  font-weight: 900;      /* Black */
-  font-style: italic;    /* Italic */
+  font-weight: 900;
+  font-style: italic;
+}
+
+/* ✅ Apply padding-top ONLY for desktop screens */
+@media (min-width: 769px) {
+  html, body {
+    padding-top: 30px;
+  }
 }
