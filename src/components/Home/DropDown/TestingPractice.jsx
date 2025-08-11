@@ -46,31 +46,28 @@ const TestingPractice = () => {
                       Danam’s Quality Assurance (QA) capabilities helps you
                       reduce your Solution Development Costs, Achieve High
                       Quality and Go Live Faster than before.
-                    </p>
-                    <p>
+                      <br />
                       Danam’s QA or Testing Center of Excellence team can help
                       you strategize your tests in an innovative way. We provide
                       Testing solutions which are tailor made to match your
                       development needs.
-                    </p>
-                    <p>
+                      <br />
                       We have working experience in various development life
                       cycles like Unified Model, Modified V model and Agile
                       Development Model. Our capabilities not only lies in
                       strategizing your tests and making your development effort
                       a success but also in Continuous improvement of your
                       current processes.
-                    </p>
-                    <p>
+                      <br />
                       With our comprehensive knowledge in various Industries,
                       our domain knowledge is unparalleled. This provides us a
                       great advantage in understanding your business
                       requirements accurately and quickly suggest solutions
                       which will exactly match your needs.
-                    </p>
-                    <p>
+                      <br />
                       We offer you the following independent Testing Services.
                     </p>
+
                   </div>
                 </div>
 

@@ -1,3 +1,7 @@
+/* ========================
+   Base Desktop Styles
+   ======================== */
+
 /* Banner Section */
 .testing-banner.centered {
   background-size: cover;
@@ -8,6 +12,11 @@
   font-size: 36px;
   font-weight: 800;
   height: 600px;
+}
+
+.testing-banner.centered .text {
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 /* Breadcrumb */
@@ -47,7 +56,7 @@
   background: #fff;
 }
 
-/* Section Title with Border */
+/* Section Title */
 .testing-details .title {
   font-size: 24px;
   font-weight: 800;
@@ -58,12 +67,12 @@
   margin-bottom: 20px;
 }
 
-/* Fixed: h4 heading inside content-style-two */
+/* h4 heading inside content-style-two */
 .testing-details .content-style-two h4 {
   font-size: 20px;
   font-weight: bold;
   margin-bottom: 10px;
-  color: #22345f !important;  /* override any orange styling */
+  color: #22345f !important;
   border-left: 5px solid #ffaa00;
   padding-left: 15px;
 }
@@ -90,7 +99,7 @@
 }
 
 .testing-details .list li::before {
-  content: '\f0da';
+  content: "❯";
   font-family: 'FontAwesome';
   position: absolute;
   left: 0;
@@ -128,25 +137,62 @@
   margin-top: 0px;
 }
 
-/* ===== Responsive for Mobile (up to 768px) ===== */
+.content-style-one .text p {
+  font-size: 16px;
+  color: #444;
+  line-height: 1.5;
+  margin-bottom: 0;
+}
+
+/* ========================
+   RESPONSIVE QUERIES
+   ======================== */
+
+/* --- Large Tablet & Small Laptop --- */
+@media (max-width: 1200px) {
+  .testing-banner.centered {
+    font-size: 32px;
+    padding: 120px 20px;
+  }
+  .testing-details .title {
+    font-size: 22px;
+  }
+}
+
+/* --- Tablet (Portrait) --- */
+@media (max-width: 992px) {
+  .col {
+    flex: 1 1 100%;
+    min-width: auto;
+  }
+  .testing-banner.centered {
+    font-size: 26px;
+    height: auto;
+  }
+  .testing-banner.centered .text {
+    font-size: 22px;
+  }
+  .testing-details {
+    padding: 30px 15px;
+  }
+}
+
+/* --- Mobile (Landscape & Portrait) --- */
 @media (max-width: 768px) {
-  
   /* Banner Section */
   .testing-banner.centered {
-    font-size: 20px;             /* Smaller font for mobile */
-    padding: 80px 15px;          /* Balanced padding */
-    height: auto;                /* Let content define height */
-    background-size: cover;      /* Ensure image covers screen */
-    background-position: center; /* Center image */
-    text-align: center;          /* Center text */
+    font-size: 20px;
+    padding: 80px 15px;
+    height: auto;
+    background-size: cover;
+    background-position: center;
+    text-align: center;
   }
-
-  /* Text inside banner */
   .testing-banner.centered .text {
-    font-size: 20px;              /* Slightly smaller */
-    line-height: 1.4;             /* Better readability */
-    padding: 0 10px;              /* Prevent text touching edges */
-    word-break: break-word;       /* Wrap text for small screens */
+    font-size: 20px;
+    line-height: 1.4;
+    padding: 0 10px;
+    word-break: break-word;
   }
 
   /* Breadcrumb */
@@ -154,33 +200,49 @@
     padding: 10px 0;
     font-size: 14px;
   }
-  
   .testing-breadcrumb .text a {
     font-size: 14px;
   }
 
-  /* Content section adjustments */
-  .testing-details {
-    padding: 15px 10px;
-  }
-
+  /* Content */
   .testing-details .title {
     font-size: 20px;
-    text-align: center;           /* Center title for mobile */
+    text-align: center;
   }
-
   .testing-details .content-style-two h4 {
     font-size: 18px;
     text-align: center;
-    border-left: 5px solid #ffaa00;
-    padding-left: 15px;
   }
-
-  /* Grid becomes single column */
   .col {
     flex: 1 1 100%;
     min-width: auto;
   }
 }
 
-
+/* --- Small Mobile (Under 480px) --- */
+@media (max-width: 480px) {
+  .testing-banner.centered {
+    font-size: 18px;
+    padding: 60px 10px;
+  }
+  .testing-banner.centered .text {
+    font-size: 18px;
+  }
+  .testing-breadcrumb {
+    font-size: 12px;
+  }
+  .testing-breadcrumb .text a {
+    font-size: 12px;
+  }
+  .testing-details .title {
+    font-size: 18px;
+  }
+  .testing-details .content-style-two h4 {
+    font-size: 16px;
+  }
+  .testing-details .text,
+  .content-style-one .text p {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+}

@@ -108,13 +108,7 @@
     background-position: center 45%; /* Adjust for mobile view */
     text-align: center;
   }
-
-  .about-bg .text {
-    display: block; /* show text if needed on mobile */
-    padding: 0 20px;
-    font-size: 16px;
-  }
-
+  
   .about-breadcrumb {
     font-size: 14px;
     padding: 10px 15px;

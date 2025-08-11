@@ -153,6 +153,6 @@
   .oracle-bg.centered {
     padding-top: 20px; /* Reduced from 250px to lift text up */
     font-size: 28px;
-    height: 280px;
+    height: 200px;
   }
 }
