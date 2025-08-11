@@ -3,10 +3,11 @@
   background-size: cover;
   background-position: center;
   padding: 150px 0;
-  color: #000000;
+  color: #ffffff;
   text-align: center;
   font-size: 36px;
   font-weight: 800;
+  height: 600px;
 }
 
 /* Breadcrumb */
@@ -63,6 +64,8 @@
   font-weight: bold;
   margin-bottom: 10px;
   color: #22345f !important;  /* override any orange styling */
+  border-left: 5px solid #ffaa00;
+  padding-left: 15px;
 }
 
 /* Paragraphs */
@@ -118,33 +121,66 @@
 
 /* Content Box Styles */
 .content-style-one {
-  margin-bottom: 40px;
+  margin-bottom: 0px;
 }
 
 .content-style-two {
-  margin-top: 20px;
+  margin-top: 0px;
 }
 
-/* Responsive */
+/* ===== Responsive for Mobile (up to 768px) ===== */
 @media (max-width: 768px) {
+  
+  /* Banner Section */
   .testing-banner.centered {
-    font-size: 28px;
-    padding: 120px 0; /* Increased from 60px to 120px to push image/text lower */
+    font-size: 20px;             /* Smaller font for mobile */
+    padding: 80px 15px;          /* Balanced padding */
+    height: auto;                /* Let content define height */
+    background-size: cover;      /* Ensure image covers screen */
+    background-position: center; /* Center image */
+    text-align: center;          /* Center text */
   }
 
-  .col {
-    flex: 1 1 100%;
+  /* Text inside banner */
+  .testing-banner.centered .text {
+    font-size: 20px;              /* Slightly smaller */
+    line-height: 1.4;             /* Better readability */
+    padding: 0 10px;              /* Prevent text touching edges */
+    word-break: break-word;       /* Wrap text for small screens */
   }
 
+  /* Breadcrumb */
+  .testing-breadcrumb {
+    padding: 10px 0;
+    font-size: 14px;
+  }
+  
+  .testing-breadcrumb .text a {
+    font-size: 14px;
+  }
+
+  /* Content section adjustments */
   .testing-details {
-    padding: 20px 10px;
+    padding: 15px 10px;
   }
 
   .testing-details .title {
-    font-size: 24px;
+    font-size: 20px;
+    text-align: center;           /* Center title for mobile */
   }
 
   .testing-details .content-style-two h4 {
-    font-size: 20px;
+    font-size: 18px;
+    text-align: center;
+    border-left: 5px solid #ffaa00;
+    padding-left: 15px;
+  }
+
+  /* Grid becomes single column */
+  .col {
+    flex: 1 1 100%;
+    min-width: auto;
   }
 }
+
+

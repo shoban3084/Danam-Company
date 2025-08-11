@@ -1,6 +1,6 @@
 /* Oracle Banner Background */
 .oracle-bg.centered {
-  height: 300px;
+  height: 600px;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -151,7 +151,7 @@
   }
 
   .oracle-bg.centered {
-    padding-top: 150px; /* Reduced from 250px to lift text up */
+    padding-top: 20px; /* Reduced from 250px to lift text up */
     font-size: 28px;
     height: 280px;
   }

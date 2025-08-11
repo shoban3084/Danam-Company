@@ -22,9 +22,10 @@ body {
 
 /* ===== Logo Styling ===== */
 .logo-box img {
-  max-height: 40px;
-  width: auto;
+  max-height: 50px;
+  width: 100%;
   object-fit: contain;
+  padding-left: 20px;
 }
 
 /* ===== Header Upper and Lower Flex Layout ===== */
@@ -157,15 +158,9 @@ body {
     margin-bottom: 20px; 
   }
 
-  .social-icons {
-    margin-top: 20px;
-    gap: 30px; 
-  }
   .topbar-wrapper {
     display: none !important;
   }
-
-
 }
 
 

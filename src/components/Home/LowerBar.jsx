@@ -18,11 +18,11 @@ const LowerBar = () => {
   }, []);
 
   useEffect(() => {
-    if (!menuOpen) {
-      setServicesOpen(false);
-      setIndustriesOpen(false);
-    }
-  }, [menuOpen]);
+    // Close dropdowns on location change
+    setMenuOpen(false);
+    setServicesOpen(false);
+    setIndustriesOpen(false);
+  }, [location]);
 
   const toggleDropdown = (menuType) => {
     if (menuType === 'services') {
@@ -34,10 +34,16 @@ const LowerBar = () => {
     }
   };
 
+  const handleNavClick = () => {
+    setMenuOpen(false);
+    setServicesOpen(false);
+    setIndustriesOpen(false);
+  };
+
   return (
     <div className={`lowerbar-container ${isSticky ? 'lowerbar-fixed' : ''}`}>
       <div className="logo-box">
-        <NavLink to="/">
+        <NavLink to="/" onClick={handleNavClick}>
           <img src="/favicon.png" alt="Danam Logo" className="logo-img" />
         </NavLink>
       </div>
@@ -49,19 +55,20 @@ const LowerBar = () => {
       </div>
 
       <nav className={`nav-menu ${menuOpen ? 'open' : ''}`}>
+        <button className="close-icon" onClick={() => setMenuOpen(false)}>×</button>
         <ul className="menu-list">
-          <li><NavLink to="/">Home</NavLink></li>
-          <li><NavLink to="/about">About Us</NavLink></li>
+          <li><NavLink to="/" onClick={handleNavClick}>Home</NavLink></li>
+          <li><NavLink to="/about" onClick={handleNavClick}>About Us</NavLink></li>
 
           <li className="dropdown">
             <div className="dropdown-toggle" onClick={() => toggleDropdown('services')}>
               Services ▾
             </div>
             <ul className={`dropdown-menu ${servicesOpen ? 'show' : ''}`}>
-              <li><NavLink to="/SevAI">SevAI Implementation</NavLink></li>
-              <li><NavLink to="/sap">SAP Implementation</NavLink></li>
-              <li><NavLink to="/Oracle">Oracle Implementation</NavLink></li>
-              <li><NavLink to="/TestingPractice">Testing Practice</NavLink></li>
+              <li><NavLink to="/SevAI" onClick={handleNavClick}>SevAI Implementation</NavLink></li>
+              <li><NavLink to="/sap" onClick={handleNavClick}>SAP Implementation</NavLink></li>
+              <li><NavLink to="/Oracle" onClick={handleNavClick}>Oracle Implementation</NavLink></li>
+              <li><NavLink to="/TestingPractice" onClick={handleNavClick}>Testing Practice</NavLink></li>
             </ul>
           </li>
 
@@ -70,42 +77,56 @@ const LowerBar = () => {
               Industries ▾
             </div>
             <ul className={`dropdown-menu ${industriesOpen ? 'show' : ''}`}>
-              <li><NavLink to="/industries/manufacturing">Manufacturing</NavLink></li>
-              <li><NavLink to="/industries/professional-services">Professional Services</NavLink></li>
-              <li><NavLink to="/industries/oil-gas">Oil & Gas</NavLink></li>
-              <li><NavLink to="/industries/banking">Banking</NavLink></li>
-              <li><NavLink to="/industries/hospitality">Hospitality</NavLink></li>
-              <li><NavLink to="/industries/life-science">Life Science</NavLink></li>
-              <li><NavLink to="/industries/high-tech">High Tech</NavLink></li>
-              <li><NavLink to="/industries/construction">Construction</NavLink></li>
-              <li><NavLink to="/industries/renewable">Renewable</NavLink></li>
-              <li><NavLink to="/industries/retail">Retail</NavLink></li>
-              <li><NavLink to="/industries/utilities">Utilities</NavLink></li>
+              <li><NavLink to="/industries/manufacturing" onClick={handleNavClick}>Manufacturing</NavLink></li>
+              <li><NavLink to="/industries/professional-services" onClick={handleNavClick}>Professional Services</NavLink></li>
+              <li><NavLink to="/industries/oil-gas" onClick={handleNavClick}>Oil & Gas</NavLink></li>
+              <li><NavLink to="/industries/banking" onClick={handleNavClick}>Banking</NavLink></li>
+              <li><NavLink to="/industries/hospitality" onClick={handleNavClick}>Hospitality</NavLink></li>
+              <li><NavLink to="/industries/life-science" onClick={handleNavClick}>Life Science</NavLink></li>
+              <li><NavLink to="/industries/high-tech" onClick={handleNavClick}>High Tech</NavLink></li>
+              <li><NavLink to="/industries/construction" onClick={handleNavClick}>Construction</NavLink></li>
+              <li><NavLink to="/industries/renewable" onClick={handleNavClick}>Renewable</NavLink></li>
+              <li><NavLink to="/industries/retail" onClick={handleNavClick}>Retail</NavLink></li>
+              <li><NavLink to="/industries/utilities" onClick={handleNavClick}>Utilities</NavLink></li>
             </ul>
           </li>
 
-          <li><NavLink to="/careers">Careers</NavLink></li>
-          <li><NavLink to="/contact">Contact Us</NavLink></li>
+          <li><NavLink to="/careers" onClick={handleNavClick}>Careers</NavLink></li>
+          <li><NavLink to="/contact" onClick={handleNavClick}>Contact Us</NavLink></li>
         </ul>
 
-        {/* Contact Info Only for Mobile */}
+        {/* Mobile-Only Contact Info + Social Icons */}
         {menuOpen && (
-          <div className="mobile-contact-info">
-            <ul className="flag-list">
-              <li>
-                <img src={USA} alt="USA" className="flag-img" />
-                <span className="flag-text">609-672-9356 (USA)</span>
-              </li>
-              <li>
-                <img src={India} alt="India" className="flag-img" />
-                <span className="flag-text">+91 44 42156668 (India)</span>
-              </li>
-              <li>
-                <img src={India} alt="India" className="flag-img" />
-                <span className="flag-text">+91 44 48562332 (India)</span>
-              </li>
-            </ul>
-          </div>
+          <>
+            <div className="mobile-contact-info">
+              <ul className="flag-list">
+                <li>
+                  <img src={USA} alt="USA" className="flag-img" />
+                  <span className="flag-text">609-672-9356 (USA)</span>
+                </li>
+                <li>
+                  <img src={India} alt="India" className="flag-img" />
+                  <span className="flag-text">+91 44 42156668 (India)</span>
+                </li>
+                <li>
+                  <img src={India} alt="India" className="flag-img" />
+                  <span className="flag-text">+91 44 48562332 (India)</span>
+                </li>
+              </ul>
+            </div>
+
+            <div className="mobile-social-icons">
+              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+                <i className="fab fa-facebook-f"></i>
+              </a>
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+                <i className="fab fa-linkedin-in"></i>
+              </a>
+              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
+                <i className="fab fa-twitter"></i>
+              </a>
+            </div>
+          </>
         )}
       </nav>
     </div>

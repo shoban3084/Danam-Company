@@ -1,17 +1,17 @@
 .sap-bg {
   background-size: cover;
   background-position: center;
-  padding: 200px 0 100px; /* Instead of using padding and padding-top separately */
-  color: #000000;
+  padding: 180px 0 100px; /* Instead of using padding and padding-top separately */
+  color: #ffffff;
   text-align: center;
-  font-size: 36px;
+  font-size: 50px;
   font-weight: 600;
-  height: 300px;
+  height: 600px;
 }
 
 /* Breadcrumb */
 .sap-breadcrumb {
-  background-color: #f5f5f5;
+  background-color: #f1f1f1;
   padding: 15px 0;
   font-size: 16px;
 }
@@ -25,7 +25,7 @@
 }
 
 .sap-breadcrumb .text a {
-  color: #2c2b2b;
+  color: #333;
   text-decoration: none;
   font-weight: 600;
   transition: color 0.2s ease;
@@ -128,11 +128,76 @@
 }
 
 @media (max-width: 768px) {
+  /* Banner */
   .sap-bg {
-    font-size: 28px;
-    padding: 60px 0;
+    font-size: 24px;          /* Smaller heading */
+    padding: 50px 15px;       /* Balanced padding */
+    height: auto;             /* Auto height for small screens */
+    line-height: 5.3;
+    text-align: center;
+    word-break: break-word;   /* Prevent overflow */
+    padding-top: 80px;
   }
+
+  /* Text inside Banner */
+  .sap-bg h1,
+  .sap-bg h2,
+  .sap-bg h3,
+  .sap-bg p {
+    font-size: 1.2em;         /* Adjusted for mobile */
+    line-height: 1.4;
+    margin: 0 auto;
+    max-width: 90%;           /* Keeps text from touching edges */
+  }
+
+  /* Breadcrumb */
+  .sap-breadcrumb {
+    font-size: 14px;
+    padding: 10px 0;
+  }
+
+  .sap-breadcrumb .container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+  }
+
+  /* Service Details */
+  .service-details {
+    padding: 20px 10px;
+  }
+
+  .service-details .sidebar-details .title {
+    font-size: 20px;
+    padding-left: 8px;
+  }
+
+  .service-details .text {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .service-details .content-style-two h4 {
+    font-size: 18px;
+    padding-left: 8px;
+  }
+
+  /* Responsive Columns */
+  .row {
+    flex-direction: column;
+    gap: 15px;
+  }
+
   .col-md-6 {
     flex: 1 1 100%;
+    min-width: 100%;
+    margin-bottom: 15px;
+  }
+
+  /* Images */
+  .service-details img {
+    margin: 10px 0;
+    border-radius: 4px;
   }
 }
+

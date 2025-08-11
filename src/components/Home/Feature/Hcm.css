@@ -1,36 +1,5 @@
 /* ============ HCM Practice Theme ============ */
 
-/* Breadcrumb */
-.hcm-breadcrumb {
-  background-color: #f5f5f5;
-  padding: 15px 0;
-  font-size: 16px;
-}
-
-.hcm-breadcrumb .container {
-  max-width: 1200px;
-  margin: auto;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-}
-
-.hcm-breadcrumb .text a {
-  color: #2c2b2b;
-  text-decoration: none;
-  font-weight: 600;
-  transition: color 0.2s ease;
-}
-
-.hcm-breadcrumb .text a:hover {
-  color: #ffb300;
-}
-
-.hcm-breadcrumb .text i {
-  margin: 0 10px;
-  color: #999;
-}
-
 /* Service Details */
 .hcm-details {
   padding: 60px 0;
@@ -101,4 +70,68 @@
   justify-content: center;
   align-items: center;
   text-align: center;
+}
+
+/* ===== Common Responsive Media Queries ===== */
+
+/* Tablet (<= 992px) */
+@media (max-width: 992px) {
+  .responsive-padding {
+    padding: 40px 15px;
+  }
+  .responsive-title {
+    font-size: 22px;
+  }
+  .responsive-text {
+    font-size: 15px;
+    line-height: 2;
+  }
+  .responsive-list {
+    font-size: 14px;
+  }
+  .centered {
+    flex-direction: column; /* stack on small screens */
+    text-align: center;
+    padding: 10px;
+  }
+}
+
+/* Mobile (<= 768px) */
+@media (max-width: 768px) {
+  .responsive-padding {
+    padding: 30px 10px;
+  }
+  .responsive-title {
+    font-size: 20px;
+  }
+  .responsive-text {
+    font-size: 14px;
+    line-height: 1.8;
+  }
+  .responsive-list {
+    font-size: 13px;
+  }
+  .centered {
+    padding: 8px;
+  }
+}
+
+/* Extra Small (<= 480px) */
+@media (max-width: 480px) {
+  .responsive-padding {
+    padding: 20px 8px;
+  }
+  .responsive-title {
+    font-size: 18px;
+  }
+  .responsive-text {
+    font-size: 13px;
+    line-height: 1.6;
+  }
+  .responsive-list {
+    font-size: 12px;
+  }
+  .centered {
+    padding: 5px;
+  }
 }

@@ -1,36 +1,5 @@
 /* ============ SCM Theme ============ */
 
-/* Breadcrumb */
-.scm-breadcrumb {
-  background-color: #f5f5f5;
-  padding: 15px 0;
-  font-size: 16px;
-}
-
-.scm-breadcrumb .container {
-  max-width: 1200px;
-  margin: auto;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-}
-
-.scm-breadcrumb .text a {
-  color: #2c2b2b;
-  text-decoration: none;
-  font-weight: 600;
-  transition: color 0.2s ease;
-}
-
-.scm-breadcrumb .text a:hover {
-  color: #ffb300;
-}
-
-.scm-breadcrumb .text i {
-  margin: 0 10px;
-  color: #999;
-}
-
 /* Service Details */
 .scm-details {
   padding: 60px 0;

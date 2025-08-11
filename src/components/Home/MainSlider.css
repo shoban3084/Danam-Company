@@ -173,17 +173,17 @@
   }
 }
 
-/* ---------------------- MEDIA QUERIES ---------------------- */
+/* ---------------------- MEDIA QUERIES FOR BASE MOBILE VIEW ---------------------- */
 
-@media (max-width: 480px) {
+@media (max-width: 768px) {
   .main-slider {
     height: 60vh; /* allow height to adapt based on content */
   }
 
   .slide {
-    background-size: contain !important;
+    background-size: cover !important;
+    background-position: top center !important;
     background-repeat: no-repeat !important;
-    background-position: center !important;
     width: 100%;
     aspect-ratio: 16 / 16; /* maintain phone screen aspect ratio */
     display: flex;
@@ -193,23 +193,24 @@
 
   .slide-content {
     position: absolute;
-    top: 45%;
+    top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
-    width: 90%; /* keep content inside visible area */
-    max-width: 300px;
+    width: 100%; /* keep content inside visible area */
+    max-width: 350px;
   }
 
   .slide-title {
-    font-size: 18px;
+    padding-top: 20px;
+    font-size: 24px;
     line-height: 22px;
     margin-bottom: 10px;
-    color: #fff; /* adjust if your image is dark */
+    color: #fff;
   }
 
   .slide-subtitle {
-    font-size: 0.85rem;
+    font-size: 18px;
     margin-bottom: 12px;
     color: #eee;
   }

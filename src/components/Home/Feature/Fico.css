@@ -1,34 +1,4 @@
 /* ============ FICO Practice Theme ============ */
-/* Breadcrumb */
-.fico-breadcrumb {
-  background-color: #f5f5f5;
-  padding: 15px 0;
-  font-size: 16px;
-}
-
-.fico-breadcrumb .container {
-  max-width: 1200px;
-  margin: auto;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-}
-
-.fico-breadcrumb .text a {
-  color: #2c2b2b;
-  text-decoration: none;
-  font-weight: 600;
-  transition: color 0.2s ease;
-}
-
-.fico-breadcrumb .text a:hover {
-  color: #ffb300; 
-}
-
-.fico-breadcrumb .text i {
-  margin: 0 10px;
-  color: #999;
-}
 /* Service Details */
 .fico-details {
   padding: 60px 0;
@@ -103,4 +73,91 @@
   justify-content: center;
   align-items: center;
   text-align: center;
+}
+
+/* ====== Responsive Media Queries for FICO Theme ====== */
+
+/* Tablet (<= 992px) */
+@media (max-width: 992px) {
+  .fico-details {
+    padding: 40px 0;
+  }
+
+  .content-style-one .title {
+    font-size: 22px;
+  }
+
+  .content-style-one .text p {
+    font-size: 15px;
+    line-height: 2.2;
+  }
+
+  .content-style-two h4 {
+    font-size: 18px;
+  }
+
+  .content-style-two .list li {
+    font-size: 14px;
+  }
+
+  .centered {
+    flex-direction: column;
+    padding: 15px;
+  }
+}
+
+/* Mobile (<= 768px) */
+@media (max-width: 768px) {
+  .fico-details {
+    padding: 30px 0;
+  }
+
+  .content-style-one .title {
+    font-size: 20px;
+  }
+
+  .content-style-one .text p {
+    font-size: 14px;
+    line-height: 2;
+  }
+
+  .content-style-two h4 {
+    font-size: 16px;
+  }
+
+  .content-style-two .list li {
+    font-size: 13px;
+  }
+
+  .centered {
+    padding: 10px;
+  }
+}
+
+/* Extra Small Devices (<= 480px) */
+@media (max-width: 480px) {
+  .fico-details {
+    padding: 20px 0;
+  }
+
+  .content-style-one .title {
+    font-size: 18px;
+  }
+
+  .content-style-one .text p {
+    font-size: 13px;
+    line-height: 1.8;
+  }
+
+  .content-style-two h4 {
+    font-size: 15px;
+  }
+
+  .content-style-two .list li {
+    font-size: 12px;
+  }
+
+  .centered {
+    padding: 8px;
+  }
 }

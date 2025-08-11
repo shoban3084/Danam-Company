@@ -1,36 +1,4 @@
 /* ============ CRM Theme ============ */
-
-/* Breadcrumb */
-.crm-breadcrumb {
-  background-color: #f5f5f5;
-  padding: 15px 0;
-  font-size: 16px;
-}
-
-.crm-breadcrumb .container {
-  max-width: 1200px;
-  margin: auto;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-}
-
-.crm-breadcrumb .text a {
-  color: #2c2b2b;
-  text-decoration: none;
-  font-weight: 600;
-  transition: color 0.2s ease;
-}
-
-.crm-breadcrumb .text a:hover {
-  color: #ffb300;
-}
-
-.crm-breadcrumb .text i {
-  margin: 0 10px;
-  color: #999;
-}
-
 /* Service Details */
 .crm-details {
   padding: 60px 0;
